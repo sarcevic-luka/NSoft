@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		53FC308926D98D18007F48EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC308826D98D18007F48EE /* AppDelegate.swift */; };
-		53FC308B26D98D18007F48EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC308A26D98D18007F48EE /* SceneDelegate.swift */; };
 		53FC308D26D98D18007F48EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC308C26D98D18007F48EE /* ViewController.swift */; };
 		53FC309026D98D18007F48EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FC308E26D98D18007F48EE /* Main.storyboard */; };
 		53FC309226D98D19007F48EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53FC309126D98D19007F48EE /* Assets.xcassets */; };
@@ -18,12 +17,11 @@
 /* Begin PBXFileReference section */
 		53FC308526D98D18007F48EE /* NSoftJobAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSoftJobAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FC308826D98D18007F48EE /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
-		53FC308A26D98D18007F48EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		53FC308C26D98D18007F48EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53FC308F26D98D18007F48EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53FC309126D98D19007F48EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53FC309426D98D19007F48EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		53FC309626D98D19007F48EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53FC309626D98D19007F48EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "NSoftJobAssignment/Common/Resources/Supporting files/Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +54,70 @@
 		53FC308726D98D18007F48EE /* NSoftJobAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				53FC308826D98D18007F48EE /* AppDelegate.swift */,
-				53FC308A26D98D18007F48EE /* SceneDelegate.swift */,
+				53FC309D26D99F46007F48EE /* Common */,
+				53FC309C26D99F41007F48EE /* App */,
 				53FC308C26D98D18007F48EE /* ViewController.swift */,
 				53FC308E26D98D18007F48EE /* Main.storyboard */,
-				53FC309126D98D19007F48EE /* Assets.xcassets */,
-				53FC309326D98D19007F48EE /* LaunchScreen.storyboard */,
-				53FC309626D98D19007F48EE /* Info.plist */,
 			);
 			path = NSoftJobAssignment;
+			sourceTree = "<group>";
+		};
+		53FC309C26D99F41007F48EE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				53FC308826D98D18007F48EE /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		53FC309D26D99F46007F48EE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				53FC309F26DAA7C0007F48EE /* Resources */,
+				53FC309E26DAA7B1007F48EE /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		53FC309E26DAA7B1007F48EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53FC309F26DAA7C0007F48EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53FC30A126DAA820007F48EE /* Assets */,
+				53FC30A026DAA7D7007F48EE /* Supporting files */,
+				53FC30A226DAA831007F48EE /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		53FC30A026DAA7D7007F48EE /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				53FC309626D98D19007F48EE /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		53FC30A126DAA820007F48EE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				53FC309126D98D19007F48EE /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		53FC30A226DAA831007F48EE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				53FC309326D98D19007F48EE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +192,6 @@
 			files = (
 				53FC308D26D98D18007F48EE /* ViewController.swift in Sources */,
 				53FC308926D98D18007F48EE /* AppDelegate.swift in Sources */,
-				53FC308B26D98D18007F48EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +340,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VJVL8D83F6;
-				INFOPLIST_FILE = NSoftJobAssignment/Info.plist;
+				INFOPLIST_FILE = "NSoftJobAssignment/Common/Resources/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VJVL8D83F6;
-				INFOPLIST_FILE = NSoftJobAssignment/Info.plist;
+				INFOPLIST_FILE = "NSoftJobAssignment/Common/Resources/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
