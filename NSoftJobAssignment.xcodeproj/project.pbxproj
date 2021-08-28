@@ -14,6 +14,7 @@
 		53FC309526D98D19007F48EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FC309326D98D19007F48EE /* LaunchScreen.storyboard */; };
 		53FC30A526DAABC2007F48EE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC30A426DAABC2007F48EE /* Alamofire */; };
 		53FC30A826DAAD34007F48EE /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC30A726DAAD34007F48EE /* GRDB */; };
+		53FC30AB26DAADF7007F48EE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC30AA26DAADF7007F48EE /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53FC30AB26DAADF7007F48EE /* Kingfisher in Frameworks */,
 				53FC30A526DAABC2007F48EE /* Alamofire in Frameworks */,
 				53FC30A826DAAD34007F48EE /* GRDB in Frameworks */,
 			);
@@ -143,6 +145,7 @@
 			packageProductDependencies = (
 				53FC30A426DAABC2007F48EE /* Alamofire */,
 				53FC30A726DAAD34007F48EE /* GRDB */,
+				53FC30AA26DAADF7007F48EE /* Kingfisher */,
 			);
 			productName = NSoftJobAssignment;
 			productReference = 53FC308526D98D18007F48EE /* NSoftJobAssignment.app */;
@@ -174,6 +177,7 @@
 			packageReferences = (
 				53FC30A326DAABC2007F48EE /* XCRemoteSwiftPackageReference "Alamofire" */,
 				53FC30A626DAAD34007F48EE /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				53FC30A926DAADF7007F48EE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 53FC308626D98D18007F48EE /* Products */;
 			projectDirPath = "";
@@ -423,6 +427,14 @@
 				minimumVersion = 5.10.0;
 			};
 		};
+		53FC30A926DAADF7007F48EE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -435,6 +447,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 53FC30A626DAAD34007F48EE /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;
+		};
+		53FC30AA26DAADF7007F48EE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53FC30A926DAADF7007F48EE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
