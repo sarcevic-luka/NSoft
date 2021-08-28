@@ -16,6 +16,7 @@
 		53FC30A826DAAD34007F48EE /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC30A726DAAD34007F48EE /* GRDB */; };
 		53FC30AB26DAADF7007F48EE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC30AA26DAADF7007F48EE /* Kingfisher */; };
 		53FC30AE26DAAE65007F48EE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC30AD26DAAE65007F48EE /* KeychainAccess */; };
+		53FC30B126DAAFB4007F48EE /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC30B026DAAFB4007F48EE /* Promises */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 				53FC30AE26DAAE65007F48EE /* KeychainAccess in Frameworks */,
 				53FC30AB26DAADF7007F48EE /* Kingfisher in Frameworks */,
 				53FC30A526DAABC2007F48EE /* Alamofire in Frameworks */,
+				53FC30B126DAAFB4007F48EE /* Promises in Frameworks */,
 				53FC30A826DAAD34007F48EE /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +151,7 @@
 				53FC30A726DAAD34007F48EE /* GRDB */,
 				53FC30AA26DAADF7007F48EE /* Kingfisher */,
 				53FC30AD26DAAE65007F48EE /* KeychainAccess */,
+				53FC30B026DAAFB4007F48EE /* Promises */,
 			);
 			productName = NSoftJobAssignment;
 			productReference = 53FC308526D98D18007F48EE /* NSoftJobAssignment.app */;
@@ -182,6 +185,7 @@
 				53FC30A626DAAD34007F48EE /* XCRemoteSwiftPackageReference "GRDB.swift" */,
 				53FC30A926DAADF7007F48EE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				53FC30AC26DAAE65007F48EE /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				53FC30AF26DAAFB4007F48EE /* XCRemoteSwiftPackageReference "promises" */,
 			);
 			productRefGroup = 53FC308626D98D18007F48EE /* Products */;
 			projectDirPath = "";
@@ -447,6 +451,14 @@
 				minimumVersion = 4.2.2;
 			};
 		};
+		53FC30AF26DAAFB4007F48EE /* XCRemoteSwiftPackageReference "promises" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/promises.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -469,6 +481,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 53FC30AC26DAAE65007F48EE /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		53FC30B026DAAFB4007F48EE /* Promises */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53FC30AF26DAAFB4007F48EE /* XCRemoteSwiftPackageReference "promises" */;
+			productName = Promises;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
