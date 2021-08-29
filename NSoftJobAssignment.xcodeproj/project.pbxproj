@@ -18,7 +18,38 @@
 		53FC30AE26DAAE65007F48EE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC30AD26DAAE65007F48EE /* KeychainAccess */; };
 		53FC30B126DAAFB4007F48EE /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC30B026DAAFB4007F48EE /* Promises */; };
 		53FC30B426DAB055007F48EE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC30B326DAB055007F48EE /* SnapKit */; };
+		53FC30BE26DAD4F3007F48EE /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 53FC30BC26DAD4F3007F48EE /* Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53FC30C126DAD4F3007F48EE /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC30BA26DAD4F3007F48EE /* Model.framework */; };
+		53FC30C226DAD4F3007F48EE /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC30BA26DAD4F3007F48EE /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53FC30C926DAD6E9007F48EE /* PokemonListResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC30C826DAD6E9007F48EE /* PokemonListResultItem.swift */; };
+		53FC30CB26DAD788007F48EE /* PokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC30CA26DAD788007F48EE /* PokemonList.swift */; };
+		53FC30CD26DB8057007F48EE /* PokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC30CC26DB8057007F48EE /* PokemonDetails.swift */; };
+		53FC30CF26DB8299007F48EE /* PokemonTypeListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC30CE26DB8299007F48EE /* PokemonTypeListItem.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53FC30BF26DAD4F3007F48EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53FC307D26D98D18007F48EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53FC30B926DAD4F3007F48EE;
+			remoteInfo = Model;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53FC30C626DAD4F3007F48EE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				53FC30C226DAD4F3007F48EE /* Model.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		53FC308526D98D18007F48EE /* NSoftJobAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSoftJobAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +59,13 @@
 		53FC309126D98D19007F48EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53FC309426D98D19007F48EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53FC309626D98D19007F48EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "NSoftJobAssignment/Common/Resources/Supporting files/Info.plist"; sourceTree = SOURCE_ROOT; };
+		53FC30BA26DAD4F3007F48EE /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FC30BC26DAD4F3007F48EE /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		53FC30BD26DAD4F3007F48EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53FC30C826DAD6E9007F48EE /* PokemonListResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListResultItem.swift; sourceTree = "<group>"; };
+		53FC30CA26DAD788007F48EE /* PokemonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonList.swift; sourceTree = "<group>"; };
+		53FC30CC26DB8057007F48EE /* PokemonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetails.swift; sourceTree = "<group>"; };
+		53FC30CE26DB8299007F48EE /* PokemonTypeListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +79,14 @@
 				53FC30B426DAB055007F48EE /* SnapKit in Frameworks */,
 				53FC30B126DAAFB4007F48EE /* Promises in Frameworks */,
 				53FC30A826DAAD34007F48EE /* GRDB in Frameworks */,
+				53FC30C126DAD4F3007F48EE /* Model.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53FC30B726DAD4F3007F48EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,14 +97,18 @@
 			isa = PBXGroup;
 			children = (
 				53FC308726D98D18007F48EE /* NSoftJobAssignment */,
+				53FC30BB26DAD4F3007F48EE /* Model */,
 				53FC308626D98D18007F48EE /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		53FC308626D98D18007F48EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				53FC308526D98D18007F48EE /* NSoftJobAssignment.app */,
+				53FC30BA26DAD4F3007F48EE /* Model.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,7 +182,39 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		53FC30BB26DAD4F3007F48EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53FC30C726DAD674007F48EE /* Source */,
+				53FC30BC26DAD4F3007F48EE /* Model.h */,
+				53FC30BD26DAD4F3007F48EE /* Info.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		53FC30C726DAD674007F48EE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				53FC30CC26DB8057007F48EE /* PokemonDetails.swift */,
+				53FC30CA26DAD788007F48EE /* PokemonList.swift */,
+				53FC30C826DAD6E9007F48EE /* PokemonListResultItem.swift */,
+				53FC30CE26DB8299007F48EE /* PokemonTypeListItem.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		53FC30B526DAD4F3007F48EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53FC30BE26DAD4F3007F48EE /* Model.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		53FC308426D98D18007F48EE /* NSoftJobAssignment */ = {
@@ -142,10 +224,12 @@
 				53FC308126D98D18007F48EE /* Sources */,
 				53FC308226D98D18007F48EE /* Frameworks */,
 				53FC308326D98D18007F48EE /* Resources */,
+				53FC30C626DAD4F3007F48EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				53FC30C026DAD4F3007F48EE /* PBXTargetDependency */,
 			);
 			name = NSoftJobAssignment;
 			packageProductDependencies = (
@@ -160,6 +244,24 @@
 			productReference = 53FC308526D98D18007F48EE /* NSoftJobAssignment.app */;
 			productType = "com.apple.product-type.application";
 		};
+		53FC30B926DAD4F3007F48EE /* Model */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53FC30C326DAD4F3007F48EE /* Build configuration list for PBXNativeTarget "Model" */;
+			buildPhases = (
+				53FC30B526DAD4F3007F48EE /* Headers */,
+				53FC30B626DAD4F3007F48EE /* Sources */,
+				53FC30B726DAD4F3007F48EE /* Frameworks */,
+				53FC30B826DAD4F3007F48EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Model;
+			productName = Model;
+			productReference = 53FC30BA26DAD4F3007F48EE /* Model.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -171,6 +273,10 @@
 				TargetAttributes = {
 					53FC308426D98D18007F48EE = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					53FC30B926DAD4F3007F48EE = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -196,6 +302,7 @@
 			projectRoot = "";
 			targets = (
 				53FC308426D98D18007F48EE /* NSoftJobAssignment */,
+				53FC30B926DAD4F3007F48EE /* Model */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +318,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53FC30B826DAD4F3007F48EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -223,7 +337,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53FC30B626DAD4F3007F48EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53FC30C926DAD6E9007F48EE /* PokemonListResultItem.swift in Sources */,
+				53FC30CB26DAD788007F48EE /* PokemonList.swift in Sources */,
+				53FC30CF26DB8299007F48EE /* PokemonTypeListItem.swift in Sources */,
+				53FC30CD26DB8057007F48EE /* PokemonDetails.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53FC30C026DAD4F3007F48EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53FC30B926DAD4F3007F48EE /* Model */;
+			targetProxy = 53FC30BF26DAD4F3007F48EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		53FC308E26D98D18007F48EE /* Main.storyboard */ = {
@@ -364,6 +497,7 @@
 		53FC309A26D98D19007F48EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -383,6 +517,7 @@
 		53FC309B26D98D19007F48EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +531,63 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		53FC30C426DAD4F3007F48EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VJVL8D83F6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Model/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = luka.sarcevic.Model;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		53FC30C526DAD4F3007F48EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VJVL8D83F6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Model/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = luka.sarcevic.Model;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -416,6 +608,15 @@
 			buildConfigurations = (
 				53FC309A26D98D19007F48EE /* Debug */,
 				53FC309B26D98D19007F48EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53FC30C326DAD4F3007F48EE /* Build configuration list for PBXNativeTarget "Model" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53FC30C426DAD4F3007F48EE /* Debug */,
+				53FC30C526DAD4F3007F48EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
