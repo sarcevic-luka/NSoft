@@ -16,15 +16,15 @@ public enum PokemonListResource: Resource {
   var endpoint: String {
     switch self {
     case .getPokemonsList:
-      return "private/appointment/list"
+      return ""
     case .getPokemonDetails(let pokemonId):
-      return "private/appointment/\(appointmentId)"
+      return "/\(pokemonId)"
     }
   }
   
   var method: HTTPMethod {
     switch self {
-    case .getActualAppointmentsList, .getPokemonDetails:
+    case .getPokemonsList, .getPokemonDetails:
       return .get
     }
   }

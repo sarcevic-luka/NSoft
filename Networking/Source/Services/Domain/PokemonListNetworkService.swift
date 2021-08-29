@@ -21,7 +21,7 @@ public final class PokemonListNetworkService {
 extension PokemonListNetworkService: PokemonListNetworkServiceProtocol {
   public func getPokemonList() -> Promise<PokemonList> {
     Promise { fullfill, reject in
-      Networking.userSession
+      Networking.session
         .request(resource: PokemonListResource.getPokemonsList)
         .validate()
         .responseDecodable(decoder: JSONDecoder.default) { (response: DataResponse<PokemonList, AFError>) in

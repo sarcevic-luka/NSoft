@@ -15,7 +15,7 @@ protocol Resource {
 
 extension Resource {
   var url: URL {
-    let baseUrl = Host.test.endpoint.appendingPathComponent(endpoint)
+    let baseUrl = Host.dev.endpoint.appendingPathComponent(endpoint)
     guard !queryItems.isEmpty else {
       return baseUrl
     }
@@ -24,6 +24,7 @@ extension Resource {
       .build() ?? baseUrl
   }
   
+  var isAuthorized: Bool { true }
   var method: HTTPMethod { .get }
   var queryItems: [URLQueryItem] { [] }
 }

@@ -18,7 +18,7 @@ extension Session {
             method: resource.method,
             parameters: parameters,
             encoding: encoding,
-            headers: resource.headers,
+            headers: nil,
             interceptor: interceptor,
             requestModifier: requestModifier)
   }
@@ -32,7 +32,7 @@ extension Session {
             method: resource.method,
             parameters: parameters,
             encoder: encoder,
-            headers: resource.headers,
+            headers: nil,
             interceptor: interceptor,
             requestModifier: requestModifier)
   }
