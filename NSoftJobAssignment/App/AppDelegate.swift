@@ -8,15 +8,16 @@
 import UIKit
 
 @UIApplicationMain
-  class AppDelegate: UIResponder {
+class AppDelegate: UIResponder {
   var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
+  private(set) lazy var appRouter = AppRouter()
 }
 
 extension AppDelegate: UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//    window?.rootViewController = appRouter.initialViewController()
+    window?.rootViewController = appRouter.initialViewController()
     window?.makeKeyAndVisible()
-
+    
     return true
   }
 }

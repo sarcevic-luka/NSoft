@@ -36,6 +36,10 @@ public extension KeychainRepository {
     get { UserDefaults.standard.string(forKey: .username) }
     set { UserDefaults.standard.setValue(newValue, forKey: .username) }
   }
+  
+  static var isUserSignedIn: Bool {
+    username != nil ? true : false
+  }
 }
 
 internal extension Keychain.Key {

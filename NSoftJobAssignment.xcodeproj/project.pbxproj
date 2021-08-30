@@ -50,6 +50,13 @@
 		53FC313426DC08C2007F48EE /* SPMLibaries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC311426DC07F2007F48EE /* SPMLibaries.framework */; platformFilter = ios; };
 		53FC313A26DC08E4007F48EE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC313926DC08E4007F48EE /* KeychainAccess */; };
 		53FC313C26DC1AC8007F48EE /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC313B26DC1AC8007F48EE /* JSONFormatter.swift */; };
+		53FC313F26DC493E007F48EE /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC313E26DC493E007F48EE /* AppRouter.swift */; };
+		53FC314326DC49BC007F48EE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314226DC49BC007F48EE /* Router.swift */; };
+		53FC314526DC4C7F007F48EE /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314426DC4C7F007F48EE /* Globals.swift */; };
+		53FC314826DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314726DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift */; };
+		53FC314C26DCB94B007F48EE /* AppDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314B26DCB94B007F48EE /* AppDataProtocol.swift */; };
+		53FC314E26DCBC97007F48EE /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314D26DCBC97007F48EE /* AppData.swift */; };
+		53FC315026DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314F26DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +167,13 @@
 		53FC311626DC07F2007F48EE /* SPMLibaries.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMLibaries.h; sourceTree = "<group>"; };
 		53FC311726DC07F2007F48EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53FC313B26DC1AC8007F48EE /* JSONFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
+		53FC313E26DC493E007F48EE /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		53FC314226DC49BC007F48EE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		53FC314426DC4C7F007F48EE /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		53FC314726DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
+		53FC314B26DCB94B007F48EE /* AppDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataProtocol.swift; sourceTree = "<group>"; };
+		53FC314D26DCBC97007F48EE /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		53FC314F26DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +259,7 @@
 		53FC309C26D99F41007F48EE /* App */ = {
 			isa = PBXGroup;
 			children = (
+				53FC313D26DC4930007F48EE /* App routing */,
 				53FC308826D98D18007F48EE /* AppDelegate.swift */,
 			);
 			path = App;
@@ -253,6 +268,8 @@
 		53FC309D26D99F46007F48EE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				53FC314926DCB8FA007F48EE /* Utility */,
+				53FC314026DC49A6007F48EE /* Protocols */,
 				53FC309F26DAA7C0007F48EE /* Resources */,
 				53FC309E26DAA7B1007F48EE /* Extensions */,
 			);
@@ -262,6 +279,7 @@
 		53FC309E26DAA7B1007F48EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				53FC314626DCB83A007F48EE /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -463,6 +481,57 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53FC313D26DC4930007F48EE /* App routing */ = {
+			isa = PBXGroup;
+			children = (
+				53FC313E26DC493E007F48EE /* AppRouter.swift */,
+			);
+			path = "App routing";
+			sourceTree = "<group>";
+		};
+		53FC314026DC49A6007F48EE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				53FC314126DC49B0007F48EE /* General */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		53FC314126DC49B0007F48EE /* General */ = {
+			isa = PBXGroup;
+			children = (
+				53FC314226DC49BC007F48EE /* Router.swift */,
+				53FC314426DC4C7F007F48EE /* Globals.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		53FC314626DCB83A007F48EE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				53FC314726DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift */,
+				53FC314F26DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		53FC314926DCB8FA007F48EE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				53FC314A26DCB904007F48EE /* App data */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		53FC314A26DCB904007F48EE /* App data */ = {
+			isa = PBXGroup;
+			children = (
+				53FC314B26DCB94B007F48EE /* AppDataProtocol.swift */,
+				53FC314D26DCBC97007F48EE /* AppData.swift */,
+			);
+			path = "App data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -677,8 +746,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53FC314326DC49BC007F48EE /* Router.swift in Sources */,
 				53FC308D26D98D18007F48EE /* ViewController.swift in Sources */,
+				53FC315026DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift in Sources */,
+				53FC314C26DCB94B007F48EE /* AppDataProtocol.swift in Sources */,
+				53FC314E26DCBC97007F48EE /* AppData.swift in Sources */,
+				53FC314826DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift in Sources */,
 				53FC308926D98D18007F48EE /* AppDelegate.swift in Sources */,
+				53FC314526DC4C7F007F48EE /* Globals.swift in Sources */,
+				53FC313F26DC493E007F48EE /* AppRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
