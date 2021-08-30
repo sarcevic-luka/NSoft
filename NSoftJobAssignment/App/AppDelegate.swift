@@ -15,6 +15,10 @@ class AppDelegate: UIResponder {
 
 extension AppDelegate: UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    
+    StartupProcessService()
+      .execute(process: AppearanceCustomisationStartupProcess())
+
     window?.rootViewController = appRouter.initialViewController()
     window?.makeKeyAndVisible()
     

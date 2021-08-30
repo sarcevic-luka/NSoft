@@ -62,7 +62,9 @@
 		53FC315926DD72D2007F48EE /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC315426DD72D2007F48EE /* SignInRouter.swift */; };
 		53FC315A26DD72D2007F48EE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC315526DD72D2007F48EE /* SignInViewController.swift */; };
 		53FC315B26DD72D2007F48EE /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC315626DD72D2007F48EE /* SignInInteractor.swift */; };
-		53FC315F26DD7373007F48EE /* SignInDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC315E26DD7373007F48EE /* SignInDataSource.swift */; };
+		53FC316226DD7826007F48EE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC316126DD7826007F48EE /* StartupProcess.swift */; };
+		53FC316426DD783B007F48EE /* StartupProcessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC316326DD783B007F48EE /* StartupProcessService.swift */; };
+		53FC316626DD7B2A007F48EE /* AppearanceCustomisationStartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC316526DD7B2A007F48EE /* AppearanceCustomisationStartupProcess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,7 +187,9 @@
 		53FC315426DD72D2007F48EE /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
 		53FC315526DD72D2007F48EE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		53FC315626DD72D2007F48EE /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
-		53FC315E26DD7373007F48EE /* SignInDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataSource.swift; sourceTree = "<group>"; };
+		53FC316126DD7826007F48EE /* StartupProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
+		53FC316326DD783B007F48EE /* StartupProcessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupProcessService.swift; sourceTree = "<group>"; };
+		53FC316526DD7B2A007F48EE /* AppearanceCustomisationStartupProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceCustomisationStartupProcess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,10 +284,10 @@
 		53FC309D26D99F46007F48EE /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				53FC314926DCB8FA007F48EE /* Utility */,
+				53FC309E26DAA7B1007F48EE /* Extensions */,
 				53FC314026DC49A6007F48EE /* Protocols */,
 				53FC309F26DAA7C0007F48EE /* Resources */,
-				53FC309E26DAA7B1007F48EE /* Extensions */,
+				53FC314926DCB8FA007F48EE /* Utility */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -534,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				53FC314A26DCB904007F48EE /* App data */,
+				53FC316026DD77F3007F48EE /* Startup services */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -551,7 +556,6 @@
 			isa = PBXGroup;
 			children = (
 				53FC315D26DD7341007F48EE /* Views */,
-				53FC315C26DD7339007F48EE /* Data source */,
 				53FC315326DD72D2007F48EE /* SignInPresenter.swift */,
 				53FC315426DD72D2007F48EE /* SignInRouter.swift */,
 				53FC315526DD72D2007F48EE /* SignInViewController.swift */,
@@ -560,20 +564,22 @@
 			path = "Sign in";
 			sourceTree = "<group>";
 		};
-		53FC315C26DD7339007F48EE /* Data source */ = {
-			isa = PBXGroup;
-			children = (
-				53FC315E26DD7373007F48EE /* SignInDataSource.swift */,
-			);
-			path = "Data source";
-			sourceTree = "<group>";
-		};
 		53FC315D26DD7341007F48EE /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				53FC315226DD72D2007F48EE /* SignInContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		53FC316026DD77F3007F48EE /* Startup services */ = {
+			isa = PBXGroup;
+			children = (
+				53FC316126DD7826007F48EE /* StartupProcess.swift */,
+				53FC316326DD783B007F48EE /* StartupProcessService.swift */,
+				53FC316526DD7B2A007F48EE /* AppearanceCustomisationStartupProcess.swift */,
+			);
+			path = "Startup services";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -796,9 +802,11 @@
 				53FC315A26DD72D2007F48EE /* SignInViewController.swift in Sources */,
 				53FC314E26DCBC97007F48EE /* AppData.swift in Sources */,
 				53FC315926DD72D2007F48EE /* SignInRouter.swift in Sources */,
-				53FC315F26DD7373007F48EE /* SignInDataSource.swift in Sources */,
 				53FC314826DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift in Sources */,
+				53FC316426DD783B007F48EE /* StartupProcessService.swift in Sources */,
+				53FC316626DD7B2A007F48EE /* AppearanceCustomisationStartupProcess.swift in Sources */,
 				53FC308926D98D18007F48EE /* AppDelegate.swift in Sources */,
+				53FC316226DD7826007F48EE /* StartupProcess.swift in Sources */,
 				53FC314526DC4C7F007F48EE /* Globals.swift in Sources */,
 				53FC315726DD72D2007F48EE /* SignInContentView.swift in Sources */,
 				53FC315B26DD72D2007F48EE /* SignInInteractor.swift in Sources */,
