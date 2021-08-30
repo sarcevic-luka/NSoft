@@ -57,6 +57,12 @@
 		53FC314C26DCB94B007F48EE /* AppDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314B26DCB94B007F48EE /* AppDataProtocol.swift */; };
 		53FC314E26DCBC97007F48EE /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314D26DCBC97007F48EE /* AppData.swift */; };
 		53FC315026DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314F26DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift */; };
+		53FC315726DD72D2007F48EE /* SignInContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC315226DD72D2007F48EE /* SignInContentView.swift */; };
+		53FC315826DD72D2007F48EE /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC315326DD72D2007F48EE /* SignInPresenter.swift */; };
+		53FC315926DD72D2007F48EE /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC315426DD72D2007F48EE /* SignInRouter.swift */; };
+		53FC315A26DD72D2007F48EE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC315526DD72D2007F48EE /* SignInViewController.swift */; };
+		53FC315B26DD72D2007F48EE /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC315626DD72D2007F48EE /* SignInInteractor.swift */; };
+		53FC315F26DD7373007F48EE /* SignInDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC315E26DD7373007F48EE /* SignInDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +180,12 @@
 		53FC314B26DCB94B007F48EE /* AppDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataProtocol.swift; sourceTree = "<group>"; };
 		53FC314D26DCBC97007F48EE /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		53FC314F26DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
+		53FC315226DD72D2007F48EE /* SignInContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInContentView.swift; sourceTree = "<group>"; };
+		53FC315326DD72D2007F48EE /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		53FC315426DD72D2007F48EE /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		53FC315526DD72D2007F48EE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		53FC315626DD72D2007F48EE /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		53FC315E26DD7373007F48EE /* SignInDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,10 +260,10 @@
 		53FC308726D98D18007F48EE /* NSoftJobAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				53FC309D26D99F46007F48EE /* Common */,
 				53FC309C26D99F41007F48EE /* App */,
-				53FC308C26D98D18007F48EE /* ViewController.swift */,
+				53FC309D26D99F46007F48EE /* Common */,
 				53FC308E26D98D18007F48EE /* Main.storyboard */,
+				53FC308C26D98D18007F48EE /* ViewController.swift */,
 			);
 			path = NSoftJobAssignment;
 			sourceTree = "<group>";
@@ -486,6 +498,7 @@
 		53FC313D26DC4930007F48EE /* App routing */ = {
 			isa = PBXGroup;
 			children = (
+				53FC315126DD70DC007F48EE /* Sign in */,
 				53FC313E26DC493E007F48EE /* AppRouter.swift */,
 			);
 			path = "App routing";
@@ -532,6 +545,35 @@
 				53FC314D26DCBC97007F48EE /* AppData.swift */,
 			);
 			path = "App data";
+			sourceTree = "<group>";
+		};
+		53FC315126DD70DC007F48EE /* Sign in */ = {
+			isa = PBXGroup;
+			children = (
+				53FC315D26DD7341007F48EE /* Views */,
+				53FC315C26DD7339007F48EE /* Data source */,
+				53FC315326DD72D2007F48EE /* SignInPresenter.swift */,
+				53FC315426DD72D2007F48EE /* SignInRouter.swift */,
+				53FC315526DD72D2007F48EE /* SignInViewController.swift */,
+				53FC315626DD72D2007F48EE /* SignInInteractor.swift */,
+			);
+			path = "Sign in";
+			sourceTree = "<group>";
+		};
+		53FC315C26DD7339007F48EE /* Data source */ = {
+			isa = PBXGroup;
+			children = (
+				53FC315E26DD7373007F48EE /* SignInDataSource.swift */,
+			);
+			path = "Data source";
+			sourceTree = "<group>";
+		};
+		53FC315D26DD7341007F48EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				53FC315226DD72D2007F48EE /* SignInContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -749,11 +791,17 @@
 				53FC314326DC49BC007F48EE /* Router.swift in Sources */,
 				53FC308D26D98D18007F48EE /* ViewController.swift in Sources */,
 				53FC315026DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift in Sources */,
+				53FC315826DD72D2007F48EE /* SignInPresenter.swift in Sources */,
 				53FC314C26DCB94B007F48EE /* AppDataProtocol.swift in Sources */,
+				53FC315A26DD72D2007F48EE /* SignInViewController.swift in Sources */,
 				53FC314E26DCBC97007F48EE /* AppData.swift in Sources */,
+				53FC315926DD72D2007F48EE /* SignInRouter.swift in Sources */,
+				53FC315F26DD7373007F48EE /* SignInDataSource.swift in Sources */,
 				53FC314826DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift in Sources */,
 				53FC308926D98D18007F48EE /* AppDelegate.swift in Sources */,
 				53FC314526DC4C7F007F48EE /* Globals.swift in Sources */,
+				53FC315726DD72D2007F48EE /* SignInContentView.swift in Sources */,
+				53FC315B26DD72D2007F48EE /* SignInInteractor.swift in Sources */,
 				53FC313F26DC493E007F48EE /* AppRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
