@@ -8,7 +8,9 @@
 
 import Foundation
 
-protocol SignInViewPresentingLogic: AnyObject { }
+protocol SignInViewPresentingLogic: AnyObject {
+  func onContinueButtonTapped(with username: String)
+}
 
 class SignInPresenter {
   var interactor: SignInBusinessLogic?
@@ -23,4 +25,11 @@ class SignInPresenter {
 }
 
 // MARK: - SignInViewPresentingLogic
-extension SignInPresenter: SignInViewPresentingLogic { }
+extension SignInPresenter: SignInViewPresentingLogic {
+  func onContinueButtonTapped(with username: String) {
+    interactor?.login(username: username)
+      .then { [weak self] _ in
+        self?.router.showPokemonList()
+      }
+  }
+}

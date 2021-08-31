@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol SignInRoutingLogic: AnyObject { }
+protocol SignInRoutingLogic: AnyObject {
+  func showPokemonList()
+}
 
 protocol SignInRouterDelegate: AnyObject { }
 
@@ -29,4 +31,9 @@ class SignInRouter {
 }
 
 // MARK: - SignInRoutingLogic
-extension SignInRouter: SignInRoutingLogic { }
+extension SignInRouter: SignInRoutingLogic {
+  func showPokemonList() {
+    #warning("Add Pokemon list scene here")
+    print("Button enabled")
+  }
+}

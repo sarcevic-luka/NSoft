@@ -7,10 +7,26 @@
 //
 
 import Foundation
+import Promises
 
-protocol SignInBusinessLogic: AnyObject { }
+protocol SignInBusinessLogic: AnyObject {
+  func login(username: String) -> Promise<Void>
+}
 
-class SignInInteractor { }
+class SignInInteractor {
+  private let appData: AppDataProtocol
+
+  init(appData: AppDataProtocol = AppData()) {
+    self.appData = appData
+  }
+}
 
 // MARK: - SignInBusinessLogic
-extension SignInInteractor: SignInBusinessLogic { }
+extension SignInInteractor: SignInBusinessLogic {
+  func login(username: String) -> Promise<Void> {
+    Promise { [weak self] fullfill, _ in
+      self?.appData.username = username
+      fullfill(())
+    }
+  }
+}

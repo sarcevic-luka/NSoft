@@ -10,9 +10,9 @@ import UIKit
 import SnapKit
 
 class SignInContentView: UIView {
-  var continueTapHandler: Action?
-  var     viewTapHandler: Action?
-  var usernameTextChangeHandler: ParametrisedAction<String?>?
+  var viewTapHandler: Action?
+  var usernameFilledHandler: ParametrisedAction<Bool>?
+  var continueTapHandler: ParametrisedAction<String>?
   private lazy var welcomeTitleLabel = UILabel()
   private lazy var inputInstructionsLabel = UILabel()
   private(set) var usernameInputTextField = UITextField()
@@ -27,6 +27,10 @@ class SignInContentView: UIView {
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
+  
+  override func resignFirstResponder() -> Bool {
+    endEditing(true)
+  }
 }
 
 extension SignInContentView {
@@ -39,8 +43,11 @@ extension SignInContentView {
 // MAKR: - Actions
 private extension SignInContentView {
   @objc func textFieldTextChanged(_ sender: UITextField) {
-    guard let value = sender.text else { return }
-    usernameTextChangeHandler?(value)
+    guard let username = sender.text else {
+      usernameFilledHandler?(false)
+      return
+    }
+    usernameFilledHandler?(username.count > 0)
   }
   
   @objc func textFieldTextEndEditing(_ sender: UITextField) {
@@ -48,7 +55,10 @@ private extension SignInContentView {
   }
   
   @objc func continueButtonTapped() {
-    continueTapHandler?()
+    guard let username = usernameInputTextField.text else {
+      return
+    }
+    continueTapHandler?(username)
   }
   
   @objc func viewTapped() {
@@ -68,8 +78,7 @@ private extension SignInContentView {
   
   func setupView() {
     backgroundColor = .white
-    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
-    addGestureRecognizer(tapGesture)
+    addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(viewTapped)))
   }
   
   func setupWelcomeTitleLabel() {

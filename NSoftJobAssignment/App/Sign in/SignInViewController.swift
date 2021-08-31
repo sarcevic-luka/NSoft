@@ -32,5 +32,15 @@ private extension SignInViewController {
     setupContentView()
   }
   
-  func setupContentView() { }
+  func setupContentView() {
+    contentView.viewTapHandler = { [weak self] in
+      _ = self?.contentView.resignFirstResponder()
+    }
+    contentView.continueTapHandler = { [weak self] username in
+      self?.presenter?.onContinueButtonTapped(with: username)
+    }
+    contentView.usernameFilledHandler = { [weak self]  usernameIsFilled in
+      self?.contentView.continueButtonEnabled = usernameIsFilled
+    }
+  }
 }
