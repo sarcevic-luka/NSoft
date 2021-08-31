@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Assets
 import SnapKit
 
 class SignInContentView: UIView {
@@ -88,7 +89,8 @@ private extension SignInContentView {
       $0.centerX.equalToSuperview()
     }
     welcomeTitleLabel.text = "Welcome"
-    welcomeTitleLabel.font = .systemFont(ofSize: 30, weight: .bold)
+    welcomeTitleLabel.font = .pokeFont(size: 45, weight: .solid)
+    welcomeTitleLabel.textColor = ColorAssets.General.pokeBlue.color
   }
   
   func setupInputInstructionsLabel() {
@@ -99,8 +101,8 @@ private extension SignInContentView {
       $0.centerX.equalToSuperview()
     }
     inputInstructionsLabel.text = "Please enter your username:"
-    inputInstructionsLabel.textColor = .darkGray
-    inputInstructionsLabel.font = .systemFont(ofSize: 18, weight: .semibold)
+    inputInstructionsLabel.textColor = ColorAssets.General.pokeLightGray.color
+    inputInstructionsLabel.font = .pokeFont(size: 18, weight: .solid)
   }
   
   func setupUsernameInputTextField() {

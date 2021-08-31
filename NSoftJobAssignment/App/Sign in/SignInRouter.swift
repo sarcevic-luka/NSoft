@@ -34,6 +34,5 @@ class SignInRouter {
 extension SignInRouter: SignInRoutingLogic {
   func showPokemonList() {
     #warning("Add Pokemon list scene here")
-    print("Button enabled")
   }
 }

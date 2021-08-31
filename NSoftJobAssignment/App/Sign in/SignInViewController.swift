@@ -27,6 +27,13 @@ class SignInViewController: UIViewController {
 // MARK: - SignInDisplayLogic
 extension SignInViewController: SignInDisplayLogic { }
 
+extension SignInViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    return contentView.usernameInputTextField.resignFirstResponder()
+  }
+}
+
+// MARK: - Private Methods
 private extension SignInViewController {
   func setupView() {
     setupContentView()
@@ -42,5 +49,6 @@ private extension SignInViewController {
     contentView.usernameFilledHandler = { [weak self]  usernameIsFilled in
       self?.contentView.continueButtonEnabled = usernameIsFilled
     }
+    contentView.usernameInputTextField.delegate = self
   }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Assets
 
 open class ActionButton: UIButton {
   public struct StyleColorDescriptor: Hashable {
@@ -35,7 +36,7 @@ open class ActionButton: UIButton {
     case disabled // Grayed version of default
     
     var font: UIFont {
-      UIFont.boldSystemFont(ofSize: 14)
+      UIFont.boldSystemFont(ofSize: 20)
     }
     
     var borderWidth: CGFloat {
@@ -78,8 +79,8 @@ open class ActionButton: UIButton {
   }
   
   private static var descriptors = Set([
-    ActionButton.StyleColorDescriptor(style: .default, titleColor: .white, backgroundColor: .red, borderColor: .black),
-    ActionButton.StyleColorDescriptor(style: .disabled, titleColor: .white, backgroundColor: .darkGray.withAlphaComponent(0.8), borderColor: .clear)
+    ActionButton.StyleColorDescriptor(style: .default, titleColor: .white, backgroundColor: ColorAssets.General.pokeBlue.color, borderColor: .clear),
+    ActionButton.StyleColorDescriptor(style: .disabled, titleColor: .white, backgroundColor: ColorAssets.General.pokeLightGray.color, borderColor: .clear)
   ])
   
   private var didSetFont = false

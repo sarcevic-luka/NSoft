@@ -72,11 +72,10 @@
 		53FC318626DE697F007F48EE /* ColorAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC318526DE697F007F48EE /* ColorAsset.swift */; };
 		53FC318926DE6AA4007F48EE /* ColorAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC318826DE6AA4007F48EE /* ColorAssets.swift */; };
 		53FC318B26DE6B13007F48EE /* ColorDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC318A26DE6B13007F48EE /* ColorDummy.swift */; };
-		53FC319126DE6CAE007F48EE /* poke_hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC318F26DE6CAE007F48EE /* poke_hollow.ttf */; };
-		53FC319226DE6CAE007F48EE /* poke_hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC318F26DE6CAE007F48EE /* poke_hollow.ttf */; };
-		53FC319326DE6CAE007F48EE /* poke_solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC319026DE6CAE007F48EE /* poke_solid.ttf */; };
-		53FC319426DE6CAE007F48EE /* poke_solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC319026DE6CAE007F48EE /* poke_solid.ttf */; };
-		53FC319726DE6DB2007F48EE /* Font-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC319626DE6DB2007F48EE /* Font-NSoftJobAssignment.swift */; };
+		53FC319126DE6CAE007F48EE /* Poke-hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC318F26DE6CAE007F48EE /* Poke-hollow.ttf */; };
+		53FC319226DE6CAE007F48EE /* Poke-hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC318F26DE6CAE007F48EE /* Poke-hollow.ttf */; };
+		53FC319326DE6CAE007F48EE /* Poke-solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC319026DE6CAE007F48EE /* Poke-solid.ttf */; };
+		53FC319426DE6CAE007F48EE /* Poke-solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC319026DE6CAE007F48EE /* Poke-solid.ttf */; };
 		53FC319826DE6DB2007F48EE /* Font-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC319626DE6DB2007F48EE /* Font-NSoftJobAssignment.swift */; };
 		53FC319E26DE6E37007F48EE /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC319C26DE6E37007F48EE /* ImageAsset.swift */; };
 		53FC31A126DE6E87007F48EE /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC319F26DE6E87007F48EE /* ImageAssets.swift */; };
@@ -224,8 +223,8 @@
 		53FC318526DE697F007F48EE /* ColorAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAsset.swift; sourceTree = "<group>"; };
 		53FC318826DE6AA4007F48EE /* ColorAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAssets.swift; sourceTree = "<group>"; };
 		53FC318A26DE6B13007F48EE /* ColorDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDummy.swift; sourceTree = "<group>"; };
-		53FC318F26DE6CAE007F48EE /* poke_hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = poke_hollow.ttf; sourceTree = "<group>"; };
-		53FC319026DE6CAE007F48EE /* poke_solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = poke_solid.ttf; sourceTree = "<group>"; };
+		53FC318F26DE6CAE007F48EE /* Poke-hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poke-hollow.ttf"; sourceTree = "<group>"; };
+		53FC319026DE6CAE007F48EE /* Poke-solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poke-solid.ttf"; sourceTree = "<group>"; };
 		53FC319626DE6DB2007F48EE /* Font-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
 		53FC319C26DE6E37007F48EE /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
 		53FC319F26DE6E87007F48EE /* ImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
@@ -289,12 +288,12 @@
 			isa = PBXGroup;
 			children = (
 				53FC308726D98D18007F48EE /* NSoftJobAssignment */,
+				53FC317526DE690A007F48EE /* Assets */,
+				53FC312026DC086E007F48EE /* Frameworks */,
 				53FC30BB26DAD4F3007F48EE /* Model */,
 				53FC30D626DB8832007F48EE /* Networking */,
-				53FC311526DC07F2007F48EE /* SPMLibaries */,
-				53FC317526DE690A007F48EE /* Assets */,
 				53FC308626D98D18007F48EE /* Products */,
-				53FC312026DC086E007F48EE /* Frameworks */,
+				53FC311526DC07F2007F48EE /* SPMLibaries */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -733,8 +732,8 @@
 		53FC318E26DE6C9F007F48EE /* Pokemon font */ = {
 			isa = PBXGroup;
 			children = (
-				53FC318F26DE6CAE007F48EE /* poke_hollow.ttf */,
-				53FC319026DE6CAE007F48EE /* poke_solid.ttf */,
+				53FC318F26DE6CAE007F48EE /* Poke-hollow.ttf */,
+				53FC319026DE6CAE007F48EE /* Poke-solid.ttf */,
 			);
 			path = "Pokemon font";
 			sourceTree = "<group>";
@@ -992,9 +991,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				53FC309526D98D19007F48EE /* LaunchScreen.storyboard in Resources */,
-				53FC319126DE6CAE007F48EE /* poke_hollow.ttf in Resources */,
+				53FC319126DE6CAE007F48EE /* Poke-hollow.ttf in Resources */,
 				53FC309226D98D19007F48EE /* Assets.xcassets in Resources */,
-				53FC319326DE6CAE007F48EE /* poke_solid.ttf in Resources */,
+				53FC319326DE6CAE007F48EE /* Poke-solid.ttf in Resources */,
 				53FC31A726DE6FFD007F48EE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1024,9 +1023,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53FC319226DE6CAE007F48EE /* poke_hollow.ttf in Resources */,
+				53FC319226DE6CAE007F48EE /* Poke-hollow.ttf in Resources */,
 				53FC31A826DE6FFD007F48EE /* Assets.xcassets in Resources */,
-				53FC319426DE6CAE007F48EE /* poke_solid.ttf in Resources */,
+				53FC319426DE6CAE007F48EE /* Poke-solid.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1040,7 +1039,6 @@
 				53FC314326DC49BC007F48EE /* Router.swift in Sources */,
 				53FC315026DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift in Sources */,
 				53FC315826DD72D2007F48EE /* SignInPresenter.swift in Sources */,
-				53FC319726DE6DB2007F48EE /* Font-NSoftJobAssignment.swift in Sources */,
 				53FC316E26DE219E007F48EE /* ActionButton-NSoftJobAssignment.swift in Sources */,
 				53FC31A326DE6EC9007F48EE /* ImageDummy.swift in Sources */,
 				53FC314C26DCB94B007F48EE /* AppDataProtocol.swift in Sources */,

@@ -6,8 +6,8 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>poke_hollow.ttf</string>
-		<string>poke_solid.ttf</string>
+		<string>Poke-hollow.ttf</string>
+		<string>Poke-solid.ttf</string>
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
