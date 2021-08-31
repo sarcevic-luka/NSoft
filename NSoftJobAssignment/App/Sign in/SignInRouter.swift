@@ -33,6 +33,7 @@ class SignInRouter {
 // MARK: - SignInRoutingLogic
 extension SignInRouter: SignInRoutingLogic {
   func showPokemonList() {
-    #warning("Add Pokemon list scene here")
+    let pokemonListScene = UINavigationController(rootViewController: PokemonListRouter.createModule(delegate: nil))
+    UIApplication.shared.focusedWindow?.setRootViewController(pokemonListScene, animated: true)
   }
 }

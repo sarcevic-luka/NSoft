@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 public enum PokemonListResource: Resource {
-  case getPokemonsList
+  case getPokemonsList(offset: Int, limit: Int)
   // Acutal Appointmen details controller
   case getPokemonDetails(pokemonId: Int)
   
@@ -26,6 +26,18 @@ public enum PokemonListResource: Resource {
     switch self {
     case .getPokemonsList, .getPokemonDetails:
       return .get
+    }
+  }
+  
+  var queryItems: [URLQueryItem] {
+    switch self {
+    case .getPokemonsList(let offset, let limit):
+      var queryItems = [URLQueryItem]()
+      queryItems.append(URLQueryItem(name: "offset", value: offset.description))
+      queryItems.append(URLQueryItem(name: "limit", value: limit.description))
+      return queryItems
+    case .getPokemonDetails:
+      return []
     }
   }
 }

@@ -91,6 +91,14 @@
 		53FC31B726DE8141007F48EE /* PokemonListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31B626DE8141007F48EE /* PokemonListCell.swift */; };
 		53FC31BB26DE8486007F48EE /* ListLayoutVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31BA26DE8486007F48EE /* ListLayoutVendor.swift */; };
 		53FC31BD26DE84A4007F48EE /* CompositionalLayoutVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31BC26DE84A4007F48EE /* CompositionalLayoutVendor.swift */; };
+		53FC31BF26DE87DA007F48EE /* UICollectionView-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31BE26DE87DA007F48EE /* UICollectionView-NSoftJobAssignment.swift */; };
+		53FC31C126DE8806007F48EE /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31C026DE8806007F48EE /* ReusableView.swift */; };
+		53FC31C326DE8B80007F48EE /* PokemonListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31C226DE8B80007F48EE /* PokemonListDataSource.swift */; };
+		53FC31C626DE90D2007F48EE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31C526DE90D2007F48EE /* SectionProtocol.swift */; };
+		53FC31C926DE9156007F48EE /* Collection-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31C826DE9156007F48EE /* Collection-NSoftJobAssignment.swift */; };
+		53FC31CB26DE91E6007F48EE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31CA26DE91E6007F48EE /* DataSourceProtocol.swift */; };
+		53FC31CD26DECF27007F48EE /* String-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31CC26DECF27007F48EE /* String-NSoftJobAssignment.swift */; };
+		53FC31CF26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31CE26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +254,14 @@
 		53FC31B626DE8141007F48EE /* PokemonListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListCell.swift; sourceTree = "<group>"; };
 		53FC31BA26DE8486007F48EE /* ListLayoutVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayoutVendor.swift; sourceTree = "<group>"; };
 		53FC31BC26DE84A4007F48EE /* CompositionalLayoutVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutVendor.swift; sourceTree = "<group>"; };
+		53FC31BE26DE87DA007F48EE /* UICollectionView-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
+		53FC31C026DE8806007F48EE /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		53FC31C226DE8B80007F48EE /* PokemonListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListDataSource.swift; sourceTree = "<group>"; };
+		53FC31C526DE90D2007F48EE /* SectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
+		53FC31C826DE9156007F48EE /* Collection-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
+		53FC31CA26DE91E6007F48EE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
+		53FC31CC26DECF27007F48EE /* String-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
+		53FC31CE26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +378,7 @@
 		53FC309E26DAA7B1007F48EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				53FC31C726DE9143007F48EE /* Foundation */,
 				53FC316C26DE217D007F48EE /* UI */,
 				53FC314626DCB83A007F48EE /* UIKit */,
 			);
@@ -426,9 +443,9 @@
 		53FC30D626DB8832007F48EE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				53FC30E126DB8847007F48EE /* Source */,
-				53FC30D726DB8832007F48EE /* Networking.h */,
 				53FC30D826DB8832007F48EE /* Info.plist */,
+				53FC30D726DB8832007F48EE /* Networking.h */,
+				53FC30E126DB8847007F48EE /* Source */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -578,6 +595,7 @@
 		53FC314026DC49A6007F48EE /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				53FC31C426DE90C1007F48EE /* Data source */,
 				53FC314126DC49B0007F48EE /* General */,
 			);
 			path = Protocols;
@@ -586,8 +604,9 @@
 		53FC314126DC49B0007F48EE /* General */ = {
 			isa = PBXGroup;
 			children = (
-				53FC314226DC49BC007F48EE /* Router.swift */,
 				53FC314426DC4C7F007F48EE /* Globals.swift */,
+				53FC31C026DE8806007F48EE /* ReusableView.swift */,
+				53FC314226DC49BC007F48EE /* Router.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -597,6 +616,8 @@
 			children = (
 				53FC314726DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift */,
 				53FC314F26DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift */,
+				53FC31BE26DE87DA007F48EE /* UICollectionView-NSoftJobAssignment.swift */,
+				53FC31CE26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -823,6 +844,7 @@
 		53FC31B526DE8115007F48EE /* Data source */ = {
 			isa = PBXGroup;
 			children = (
+				53FC31C226DE8B80007F48EE /* PokemonListDataSource.swift */,
 			);
 			path = "Data source";
 			sourceTree = "<group>";
@@ -842,6 +864,24 @@
 				53FC31BC26DE84A4007F48EE /* CompositionalLayoutVendor.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		53FC31C426DE90C1007F48EE /* Data source */ = {
+			isa = PBXGroup;
+			children = (
+				53FC31C526DE90D2007F48EE /* SectionProtocol.swift */,
+				53FC31CA26DE91E6007F48EE /* DataSourceProtocol.swift */,
+			);
+			path = "Data source";
+			sourceTree = "<group>";
+		};
+		53FC31C726DE9143007F48EE /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				53FC31C826DE9156007F48EE /* Collection-NSoftJobAssignment.swift */,
+				53FC31CC26DECF27007F48EE /* String-NSoftJobAssignment.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1100,6 +1140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53FC31CB26DE91E6007F48EE /* DataSourceProtocol.swift in Sources */,
 				53FC31B126DE80FD007F48EE /* PokemonListRouter.swift in Sources */,
 				53FC314326DC49BC007F48EE /* Router.swift in Sources */,
 				53FC315026DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift in Sources */,
@@ -1108,23 +1149,30 @@
 				53FC316E26DE219E007F48EE /* ActionButton-NSoftJobAssignment.swift in Sources */,
 				53FC31B326DE80FD007F48EE /* PokemonListInteractor.swift in Sources */,
 				53FC31BB26DE8486007F48EE /* ListLayoutVendor.swift in Sources */,
+				53FC31C126DE8806007F48EE /* ReusableView.swift in Sources */,
 				53FC31B226DE80FD007F48EE /* PokemonListViewController.swift in Sources */,
 				53FC31A326DE6EC9007F48EE /* ImageDummy.swift in Sources */,
 				53FC314C26DCB94B007F48EE /* AppDataProtocol.swift in Sources */,
+				53FC31C326DE8B80007F48EE /* PokemonListDataSource.swift in Sources */,
 				53FC315A26DD72D2007F48EE /* SignInViewController.swift in Sources */,
+				53FC31BF26DE87DA007F48EE /* UICollectionView-NSoftJobAssignment.swift in Sources */,
 				53FC314E26DCBC97007F48EE /* AppData.swift in Sources */,
 				53FC315926DD72D2007F48EE /* SignInRouter.swift in Sources */,
 				53FC316B26DE1C69007F48EE /* ActionButton.swift in Sources */,
 				53FC314826DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift in Sources */,
 				53FC316426DD783B007F48EE /* StartupProcessService.swift in Sources */,
+				53FC31C626DE90D2007F48EE /* SectionProtocol.swift in Sources */,
 				53FC316626DD7B2A007F48EE /* AppearanceCustomisationStartupProcess.swift in Sources */,
 				53FC308926D98D18007F48EE /* AppDelegate.swift in Sources */,
 				53FC31AF26DE80FD007F48EE /* PokemonListContentView.swift in Sources */,
 				53FC316226DD7826007F48EE /* StartupProcess.swift in Sources */,
 				53FC314526DC4C7F007F48EE /* Globals.swift in Sources */,
 				53FC31BD26DE84A4007F48EE /* CompositionalLayoutVendor.swift in Sources */,
+				53FC31CD26DECF27007F48EE /* String-NSoftJobAssignment.swift in Sources */,
+				53FC31CF26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift in Sources */,
 				53FC31B726DE8141007F48EE /* PokemonListCell.swift in Sources */,
 				53FC315726DD72D2007F48EE /* SignInContentView.swift in Sources */,
+				53FC31C926DE9156007F48EE /* Collection-NSoftJobAssignment.swift in Sources */,
 				53FC315B26DD72D2007F48EE /* SignInInteractor.swift in Sources */,
 				53FC313F26DC493E007F48EE /* AppRouter.swift in Sources */,
 			);

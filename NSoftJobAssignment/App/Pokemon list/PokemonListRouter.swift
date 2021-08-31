@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Model
 
-protocol PokemonListRoutingLogic: class { }
+protocol PokemonListRoutingLogic: AnyObject {
+  func showFavouritesList()
+  func showDetails(pokemon: PokemonListResultItem)
+}
 
-protocol PokemonListRouterDelegate: class { }
+protocol PokemonListRouterDelegate: AnyObject { }
 
 class PokemonListRouter {
   weak var viewController: PokemonListViewController?
@@ -29,4 +33,12 @@ class PokemonListRouter {
 }
 
 // MARK: - PokemonListRoutingLogic
-extension PokemonListRouter: PokemonListRoutingLogic { }
+extension PokemonListRouter: PokemonListRoutingLogic {
+  func showFavouritesList() {
+    #warning("Implement")
+  }
+  
+  func showDetails(pokemon: PokemonListResultItem) {
+    #warning("Implement")
+  }
+}

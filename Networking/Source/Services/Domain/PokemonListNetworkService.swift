@@ -11,7 +11,7 @@ import Promises
 import Alamofire
 
 public protocol PokemonListNetworkServiceProtocol {
-  func getPokemonList() -> Promise<PokemonList>
+  func getPokemonList(offset: Int, limit: Int) -> Promise<PokemonList>
 }
 
 public final class PokemonListNetworkService {
@@ -19,10 +19,10 @@ public final class PokemonListNetworkService {
 }
 
 extension PokemonListNetworkService: PokemonListNetworkServiceProtocol {
-  public func getPokemonList() -> Promise<PokemonList> {
+  public func getPokemonList(offset: Int, limit: Int) -> Promise<PokemonList> {
     Promise { fullfill, reject in
       Networking.session
-        .request(resource: PokemonListResource.getPokemonsList)
+        .request(resource: PokemonListResource.getPokemonsList(offset: offset, limit: limit))
         .validate()
         .responseDecodable(decoder: JSONDecoder.default) { (response: DataResponse<PokemonList, AFError>) in
           switch response.result {

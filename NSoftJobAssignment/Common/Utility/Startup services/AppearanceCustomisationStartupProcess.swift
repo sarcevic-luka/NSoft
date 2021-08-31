@@ -6,27 +6,23 @@
 //
 
 import UIKit
+import Assets
 
 final class AppearanceCustomisationStartupProcess: StartupProcess {
   func run(completion: @escaping (Bool) -> Void) {
     setupNavigationBarAppearance()
-    
     completion(true)
   }
 }
 
 private extension AppearanceCustomisationStartupProcess {
   func setupNavigationBarAppearance() {
-    UINavigationBar.appearance().barTintColor = .white
+    UINavigationBar.appearance().barTintColor = ColorAssets.General.pokeRed.color
     let appearance = UINavigationBarAppearance()
     appearance.configureWithTransparentBackground()
-    appearance.backgroundColor = UIColor.systemBackground.withAlphaComponent(0.10)
+    appearance.backgroundColor = ColorAssets.General.pokeRed.color
     appearance.titleTextAttributes = [
-      NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .bold),
-      NSAttributedString.Key.foregroundColor: UIColor.white
-    ]
-    appearance.largeTitleTextAttributes = [
-      NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .bold),
+      NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .medium),
       NSAttributedString.Key.foregroundColor: UIColor.white
     ]
     UINavigationBar.appearance().standardAppearance = appearance

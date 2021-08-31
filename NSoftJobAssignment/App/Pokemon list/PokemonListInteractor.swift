@@ -7,10 +7,25 @@
 //
 
 import Foundation
+import Networking
+import Model
+import Promises
 
-protocol PokemonListBusinessLogic: class { }
+protocol PokemonListBusinessLogic: AnyObject {
+  func getPokemonsList(offset: Int, limit: Int) -> Promise<PokemonList>
+}
 
-class PokemonListInteractor { }
+class PokemonListInteractor {
+  private let pokemonListNetworkService: PokemonListNetworkServiceProtocol
+  
+  init(pokemonListNetworkService: PokemonListNetworkServiceProtocol = PokemonListNetworkService()) {
+    self.pokemonListNetworkService = pokemonListNetworkService
+  }
+}
 
 // MARK: - PokemonListBusinessLogic
-extension PokemonListInteractor: PokemonListBusinessLogic { }
+extension PokemonListInteractor: PokemonListBusinessLogic {
+  func getPokemonsList(offset: Int, limit: Int) -> Promise<PokemonList> {
+    pokemonListNetworkService.getPokemonList(offset: offset, limit: limit)
+  }
+}
