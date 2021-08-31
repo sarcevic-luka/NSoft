@@ -21,7 +21,7 @@ extension AppDelegate: UIApplicationDelegate {
 
     window?.rootViewController = appRouter.initialViewController()
     window?.makeKeyAndVisible()
-    
+
     return true
   }
 }

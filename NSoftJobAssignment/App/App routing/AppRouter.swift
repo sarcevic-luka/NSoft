@@ -28,7 +28,8 @@ extension AppRouter: Router, AppRoutingLogic {
 
 extension AppRouter {
   func initialViewController() -> UIViewController {
-    return UIViewController()
+    #warning("After adding list - update this")
+    return  SignInRouter.createModule(delegate: nil)
 //   appData. KeychainRepository.userSignedIn == nil ? UINavigationController(rootViewController: UserAccessRouter.createModule(delegate: nil)) : PokemonListRouter.createModule(delegate: nil)
   }
 }
