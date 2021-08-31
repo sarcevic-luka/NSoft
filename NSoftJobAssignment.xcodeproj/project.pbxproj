@@ -65,6 +65,25 @@
 		53FC316626DD7B2A007F48EE /* AppearanceCustomisationStartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC316526DD7B2A007F48EE /* AppearanceCustomisationStartupProcess.swift */; };
 		53FC316B26DE1C69007F48EE /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC316A26DE1C69007F48EE /* ActionButton.swift */; };
 		53FC316E26DE219E007F48EE /* ActionButton-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC316D26DE219E007F48EE /* ActionButton-NSoftJobAssignment.swift */; };
+		53FC317826DE690A007F48EE /* Assets.h in Headers */ = {isa = PBXBuildFile; fileRef = 53FC317626DE690A007F48EE /* Assets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53FC317B26DE690A007F48EE /* Assets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC317426DE690A007F48EE /* Assets.framework */; };
+		53FC317C26DE690A007F48EE /* Assets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC317426DE690A007F48EE /* Assets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53FC318226DE694D007F48EE /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC318126DE694D007F48EE /* Asset.swift */; };
+		53FC318626DE697F007F48EE /* ColorAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC318526DE697F007F48EE /* ColorAsset.swift */; };
+		53FC318926DE6AA4007F48EE /* ColorAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC318826DE6AA4007F48EE /* ColorAssets.swift */; };
+		53FC318B26DE6B13007F48EE /* ColorDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC318A26DE6B13007F48EE /* ColorDummy.swift */; };
+		53FC319126DE6CAE007F48EE /* poke_hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC318F26DE6CAE007F48EE /* poke_hollow.ttf */; };
+		53FC319226DE6CAE007F48EE /* poke_hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC318F26DE6CAE007F48EE /* poke_hollow.ttf */; };
+		53FC319326DE6CAE007F48EE /* poke_solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC319026DE6CAE007F48EE /* poke_solid.ttf */; };
+		53FC319426DE6CAE007F48EE /* poke_solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FC319026DE6CAE007F48EE /* poke_solid.ttf */; };
+		53FC319726DE6DB2007F48EE /* Font-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC319626DE6DB2007F48EE /* Font-NSoftJobAssignment.swift */; };
+		53FC319826DE6DB2007F48EE /* Font-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC319626DE6DB2007F48EE /* Font-NSoftJobAssignment.swift */; };
+		53FC319E26DE6E37007F48EE /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC319C26DE6E37007F48EE /* ImageAsset.swift */; };
+		53FC31A126DE6E87007F48EE /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC319F26DE6E87007F48EE /* ImageAssets.swift */; };
+		53FC31A326DE6EC9007F48EE /* ImageDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31A226DE6EC9007F48EE /* ImageDummy.swift */; };
+		53FC31A426DE6EC9007F48EE /* ImageDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31A226DE6EC9007F48EE /* ImageDummy.swift */; };
+		53FC31A726DE6FFD007F48EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53FC31A626DE6FFD007F48EE /* Assets.xcassets */; };
+		53FC31A826DE6FFD007F48EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53FC31A626DE6FFD007F48EE /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +129,13 @@
 			remoteGlobalIDString = 53FC311326DC07F2007F48EE;
 			remoteInfo = SPMLibaries;
 		};
+		53FC317926DE690A007F48EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53FC307D26D98D18007F48EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53FC317326DE690A007F48EE;
+			remoteInfo = Assets;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,6 +148,7 @@
 				53FC30DD26DB8832007F48EE /* Networking.framework in Embed Frameworks */,
 				53FC30C226DAD4F3007F48EE /* Model.framework in Embed Frameworks */,
 				53FC311C26DC07F2007F48EE /* SPMLibaries.framework in Embed Frameworks */,
+				53FC317C26DE690A007F48EE /* Assets.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +217,20 @@
 		53FC316526DD7B2A007F48EE /* AppearanceCustomisationStartupProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceCustomisationStartupProcess.swift; sourceTree = "<group>"; };
 		53FC316A26DE1C69007F48EE /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		53FC316D26DE219E007F48EE /* ActionButton-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActionButton-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
+		53FC317426DE690A007F48EE /* Assets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Assets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FC317626DE690A007F48EE /* Assets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assets.h; sourceTree = "<group>"; };
+		53FC317726DE690A007F48EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53FC318126DE694D007F48EE /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		53FC318526DE697F007F48EE /* ColorAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAsset.swift; sourceTree = "<group>"; };
+		53FC318826DE6AA4007F48EE /* ColorAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAssets.swift; sourceTree = "<group>"; };
+		53FC318A26DE6B13007F48EE /* ColorDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDummy.swift; sourceTree = "<group>"; };
+		53FC318F26DE6CAE007F48EE /* poke_hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = poke_hollow.ttf; sourceTree = "<group>"; };
+		53FC319026DE6CAE007F48EE /* poke_solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = poke_solid.ttf; sourceTree = "<group>"; };
+		53FC319626DE6DB2007F48EE /* Font-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
+		53FC319C26DE6E37007F48EE /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
+		53FC319F26DE6E87007F48EE /* ImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
+		53FC31A226DE6EC9007F48EE /* ImageDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDummy.swift; sourceTree = "<group>"; };
+		53FC31A626DE6FFD007F48EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +241,7 @@
 				53FC30DC26DB8832007F48EE /* Networking.framework in Frameworks */,
 				53FC311B26DC07F2007F48EE /* SPMLibaries.framework in Frameworks */,
 				53FC30C126DAD4F3007F48EE /* Model.framework in Frameworks */,
+				53FC317B26DE690A007F48EE /* Assets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +275,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53FC317126DE690A007F48EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -243,6 +292,7 @@
 				53FC30BB26DAD4F3007F48EE /* Model */,
 				53FC30D626DB8832007F48EE /* Networking */,
 				53FC311526DC07F2007F48EE /* SPMLibaries */,
+				53FC317526DE690A007F48EE /* Assets */,
 				53FC308626D98D18007F48EE /* Products */,
 				53FC312026DC086E007F48EE /* Frameworks */,
 			);
@@ -257,6 +307,7 @@
 				53FC30BA26DAD4F3007F48EE /* Model.framework */,
 				53FC30D526DB8832007F48EE /* Networking.framework */,
 				53FC311426DC07F2007F48EE /* SPMLibaries.framework */,
+				53FC317426DE690A007F48EE /* Assets.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -614,6 +665,122 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		53FC317526DE690A007F48EE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				53FC317626DE690A007F48EE /* Assets.h */,
+				53FC317726DE690A007F48EE /* Info.plist */,
+				53FC318026DE6948007F48EE /* Base */,
+				53FC318326DE6968007F48EE /* Colors */,
+				53FC318C26DE6B75007F48EE /* Fonts */,
+				53FC319926DE6E14007F48EE /* Images and icons */,
+				53FC31A526DE6F7E007F48EE /* Resources */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		53FC318026DE6948007F48EE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				53FC318126DE694D007F48EE /* Asset.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		53FC318326DE6968007F48EE /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				53FC318426DE6976007F48EE /* Protocols */,
+				53FC318726DE6A95007F48EE /* Source */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		53FC318426DE6976007F48EE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				53FC318526DE697F007F48EE /* ColorAsset.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		53FC318726DE6A95007F48EE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				53FC318826DE6AA4007F48EE /* ColorAssets.swift */,
+				53FC318A26DE6B13007F48EE /* ColorDummy.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		53FC318C26DE6B75007F48EE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				53FC318D26DE6B8D007F48EE /* Resource */,
+				53FC319526DE6D6E007F48EE /* Source */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		53FC318D26DE6B8D007F48EE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				53FC318E26DE6C9F007F48EE /* Pokemon font */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		53FC318E26DE6C9F007F48EE /* Pokemon font */ = {
+			isa = PBXGroup;
+			children = (
+				53FC318F26DE6CAE007F48EE /* poke_hollow.ttf */,
+				53FC319026DE6CAE007F48EE /* poke_solid.ttf */,
+			);
+			path = "Pokemon font";
+			sourceTree = "<group>";
+		};
+		53FC319526DE6D6E007F48EE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				53FC319626DE6DB2007F48EE /* Font-NSoftJobAssignment.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		53FC319926DE6E14007F48EE /* Images and icons */ = {
+			isa = PBXGroup;
+			children = (
+				53FC319B26DE6E26007F48EE /* Protocols */,
+				53FC319A26DE6E20007F48EE /* Source */,
+			);
+			path = "Images and icons";
+			sourceTree = "<group>";
+		};
+		53FC319A26DE6E20007F48EE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				53FC319F26DE6E87007F48EE /* ImageAssets.swift */,
+				53FC31A226DE6EC9007F48EE /* ImageDummy.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		53FC319B26DE6E26007F48EE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				53FC319C26DE6E37007F48EE /* ImageAsset.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		53FC31A526DE6F7E007F48EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53FC31A626DE6FFD007F48EE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -641,6 +808,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53FC316F26DE690A007F48EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53FC317826DE690A007F48EE /* Assets.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -659,6 +834,7 @@
 				53FC30C026DAD4F3007F48EE /* PBXTargetDependency */,
 				53FC30DB26DB8832007F48EE /* PBXTargetDependency */,
 				53FC311A26DC07F2007F48EE /* PBXTargetDependency */,
+				53FC317A26DE690A007F48EE /* PBXTargetDependency */,
 			);
 			name = NSoftJobAssignment;
 			packageProductDependencies = (
@@ -733,6 +909,24 @@
 			productReference = 53FC311426DC07F2007F48EE /* SPMLibaries.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		53FC317326DE690A007F48EE /* Assets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53FC317D26DE690A007F48EE /* Build configuration list for PBXNativeTarget "Assets" */;
+			buildPhases = (
+				53FC316F26DE690A007F48EE /* Headers */,
+				53FC317026DE690A007F48EE /* Sources */,
+				53FC317126DE690A007F48EE /* Frameworks */,
+				53FC317226DE690A007F48EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Assets;
+			productName = Assets;
+			productReference = 53FC317426DE690A007F48EE /* Assets.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -755,6 +949,10 @@
 					};
 					53FC311326DC07F2007F48EE = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					53FC317326DE690A007F48EE = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -783,6 +981,7 @@
 				53FC30B926DAD4F3007F48EE /* Model */,
 				53FC30D426DB8832007F48EE /* Networking */,
 				53FC311326DC07F2007F48EE /* SPMLibaries */,
+				53FC317326DE690A007F48EE /* Assets */,
 			);
 		};
 /* End PBXProject section */
@@ -793,7 +992,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				53FC309526D98D19007F48EE /* LaunchScreen.storyboard in Resources */,
+				53FC319126DE6CAE007F48EE /* poke_hollow.ttf in Resources */,
 				53FC309226D98D19007F48EE /* Assets.xcassets in Resources */,
+				53FC319326DE6CAE007F48EE /* poke_solid.ttf in Resources */,
+				53FC31A726DE6FFD007F48EE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +1020,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53FC317226DE690A007F48EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53FC319226DE6CAE007F48EE /* poke_hollow.ttf in Resources */,
+				53FC31A826DE6FFD007F48EE /* Assets.xcassets in Resources */,
+				53FC319426DE6CAE007F48EE /* poke_solid.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -828,7 +1040,9 @@
 				53FC314326DC49BC007F48EE /* Router.swift in Sources */,
 				53FC315026DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift in Sources */,
 				53FC315826DD72D2007F48EE /* SignInPresenter.swift in Sources */,
+				53FC319726DE6DB2007F48EE /* Font-NSoftJobAssignment.swift in Sources */,
 				53FC316E26DE219E007F48EE /* ActionButton-NSoftJobAssignment.swift in Sources */,
+				53FC31A326DE6EC9007F48EE /* ImageDummy.swift in Sources */,
 				53FC314C26DCB94B007F48EE /* AppDataProtocol.swift in Sources */,
 				53FC315A26DD72D2007F48EE /* SignInViewController.swift in Sources */,
 				53FC314E26DCBC97007F48EE /* AppData.swift in Sources */,
@@ -886,6 +1100,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53FC317026DE690A007F48EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53FC319E26DE6E37007F48EE /* ImageAsset.swift in Sources */,
+				53FC318926DE6AA4007F48EE /* ColorAssets.swift in Sources */,
+				53FC31A426DE6EC9007F48EE /* ImageDummy.swift in Sources */,
+				53FC319826DE6DB2007F48EE /* Font-NSoftJobAssignment.swift in Sources */,
+				53FC318626DE697F007F48EE /* ColorAsset.swift in Sources */,
+				53FC318B26DE6B13007F48EE /* ColorDummy.swift in Sources */,
+				53FC31A126DE6E87007F48EE /* ImageAssets.swift in Sources */,
+				53FC318226DE694D007F48EE /* Asset.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -920,6 +1149,11 @@
 			platformFilter = ios;
 			target = 53FC311326DC07F2007F48EE /* SPMLibaries */;
 			targetProxy = 53FC313626DC08C2007F48EE /* PBXContainerItemProxy */;
+		};
+		53FC317A26DE690A007F48EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53FC317326DE690A007F48EE /* Assets */;
+			targetProxy = 53FC317926DE690A007F48EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1261,6 +1495,63 @@
 			};
 			name = Release;
 		};
+		53FC317E26DE690A007F48EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VJVL8D83F6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Assets/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = luka.sarcevic.Assets;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		53FC317F26DE690A007F48EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VJVL8D83F6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Assets/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = luka.sarcevic.Assets;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1305,6 +1596,15 @@
 			buildConfigurations = (
 				53FC311E26DC07F2007F48EE /* Debug */,
 				53FC311F26DC07F2007F48EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53FC317D26DE690A007F48EE /* Build configuration list for PBXNativeTarget "Assets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53FC317E26DE690A007F48EE /* Debug */,
+				53FC317F26DE690A007F48EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
