@@ -54,16 +54,15 @@ extension PokemonListViewController: PokemonListDisplayLogic {
 // MARK: - CollectionViewDataSource
 extension PokemonListViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return dataSource?.numberOfItems(in: section) ?? 0
-    //dataSource?.pokemonList.count ?? 0
+    return dataSource?.pokemonList.count ?? 0 //dataSource?.numberOfItems(in: section) ?? 0
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let item = dataSource?.item(at: indexPath) else { return UICollectionViewCell() }
     let pokemonListCell: PokemonListCell = collectionView.dequeuReusableCell(forIndexPath: indexPath)
     if isLoadingCell(for: indexPath) {
-      pokemonListCell.update(PokemonListCell.ViewModel(name: "Loading name"))
+      pokemonListCell.update(PokemonListCell.ViewModel(name: nil))
     } else {
+      guard let item = dataSource?.item(at: indexPath) else { return UICollectionViewCell() }
       switch item {
       case .pokemonItem(let item):
         pokemonListCell.update(item)

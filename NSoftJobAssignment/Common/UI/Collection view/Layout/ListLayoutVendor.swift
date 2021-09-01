@@ -36,7 +36,7 @@ public struct ListLayoutVendor {
 
 extension ListLayoutVendor: CompositionalLayoutVendor {
   public func vendLayout() -> UICollectionViewCompositionalLayout {
-    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(estimatedItemHeight))
+    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
     let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
     let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitems: [item])

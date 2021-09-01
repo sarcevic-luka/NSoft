@@ -11,9 +11,10 @@ import Model
 
 class PokemonListCell: UICollectionViewCell {
   struct ViewModel {
-    let name: String
+    let name: String?
   }
   private(set) lazy var containerView = UIView()
+  private lazy var indicatorView = UIActivityIndicatorView()
   private lazy var titleLabel = UILabel()
 
   override init(frame: CGRect) {
@@ -29,7 +30,13 @@ class PokemonListCell: UICollectionViewCell {
 
 extension PokemonListCell {
   func update(_ viewModel: ViewModel) {
-    titleLabel.text = viewModel.name
+    guard let pokemonName = viewModel.name else {
+      indicatorView.startAnimating()
+      titleLabel.text = ""
+      return
+    }
+    titleLabel.text = pokemonName
+    indicatorView.stopAnimating()
   }
 }
 
@@ -37,6 +44,7 @@ extension PokemonListCell {
 private extension PokemonListCell {
   func setupViews() {
     setupView()
+    setupIndicatorView()
     setupContainerView()
     setupTitleLabel()
   }
@@ -45,6 +53,15 @@ private extension PokemonListCell {
     contentView.backgroundColor = .clear
   }
 
+  func setupIndicatorView() {
+    addSubview(indicatorView)
+    indicatorView.snp.makeConstraints {
+      $0.center.equalToSuperview()
+    }
+    indicatorView.hidesWhenStopped = true
+    indicatorView.color = ColorAssets.General.pokeRed.color
+  }
+  
   func setupContainerView() {
     contentView.addSubview(containerView)
     containerView.snp.makeConstraints {

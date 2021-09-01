@@ -33,7 +33,7 @@ class PokemonListPresenter {
 // MARK: - PokemonListViewPresentingLogic
 extension PokemonListPresenter: PokemonListViewPresentingLogic {
   func onPrefetchRequested() {
-    #warning("Logic here")
+    getAndSetPokemonsList()
   }
   
   func onFavouritesSelected() {

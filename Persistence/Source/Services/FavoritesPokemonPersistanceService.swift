@@ -71,7 +71,7 @@ private extension FavoritesPokemonPersistanceService {
   
   func removePokemonFromFavorites(pokemonId: Int) {
     do {
-      try Persistence.dbQueue
+      _ = try Persistence.dbQueue
         .write { db in
           try PokemonDetailsDBO.deleteOne(db, key: pokemonId)
         }
