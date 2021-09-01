@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol SignInDisplayLogic: AnyObject { }
+protocol SignInDisplayLogic: AnyObject {
+  func displayUsernameMissing()
+}
 
 class SignInViewController: UIViewController {
   var presenter: SignInViewPresentingLogic?
@@ -25,7 +27,11 @@ class SignInViewController: UIViewController {
 }
 
 // MARK: - SignInDisplayLogic
-extension SignInViewController: SignInDisplayLogic { }
+extension SignInViewController: SignInDisplayLogic {
+  func displayUsernameMissing() {
+    contentView.notifyEmptyName()
+  }
+}
 
 extension SignInViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -46,8 +52,8 @@ private extension SignInViewController {
     contentView.continueTapHandler = { [weak self] username in
       self?.presenter?.onContinueButtonTapped(with: username)
     }
-    contentView.usernameFilledHandler = { [weak self]  usernameIsFilled in
-      self?.contentView.continueButtonEnabled = usernameIsFilled
+    contentView.usernameFilledHandler = { [weak self] usernameIsFilled in
+      self?.contentView.continueButton(buttonIsEnabled: usernameIsFilled)
     }
     contentView.usernameInputTextField.delegate = self
   }

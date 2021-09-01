@@ -27,9 +27,13 @@ class SignInPresenter {
 // MARK: - SignInViewPresentingLogic
 extension SignInPresenter: SignInViewPresentingLogic {
   func onContinueButtonTapped(with username: String) {
-    interactor?.login(username: username)
-      .then { [weak self] _ in
-        self?.router.showPokemonList()
-      }
+    if username.count == 0 {
+      view?.displayUsernameMissing()
+    } else {
+      interactor?.login(username: username)
+        .then { [weak self] _ in
+          self?.router.showPokemonList()
+        }
+    }
   }
 }

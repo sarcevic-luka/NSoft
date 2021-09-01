@@ -35,9 +35,13 @@ class SignInContentView: UIView {
 }
 
 extension SignInContentView {
-  var continueButtonEnabled: Bool {
-    get { continueButton.isEnabled }
-    set { continueButton.isEnabled = newValue}
+  func continueButton(buttonIsEnabled: Bool) {
+    continueButton.backgroundColor = buttonIsEnabled ? ColorAssets.General.pokeBlue.color : ColorAssets.General.pokeLightGray.color
+  }
+  
+  func notifyEmptyName() {
+    inputInstructionsLabel.shake()
+    continueButton.shake()
   }
 }
 
