@@ -116,6 +116,8 @@
 		53FC320726DF5EEE007F48EE /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC30BA26DAD4F3007F48EE /* Model.framework */; };
 		53FC320826DF5EEE007F48EE /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC30BA26DAD4F3007F48EE /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53FC320E26DF6963007F48EE /* PersistenceStartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC320D26DF6963007F48EE /* PersistenceStartupProcess.swift */; };
+		53FC321026DF83CD007F48EE /* UIView-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC320F26DF83CD007F48EE /* UIView-NSoftJobAssignment.swift */; };
+		53FC321526DF8DD2007F48EE /* NavigationBarSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC321426DF8DD2007F48EE /* NavigationBarSetupable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -326,6 +328,8 @@
 		53FC31FA26DF57F7007F48EE /* FavoritesPokemonPersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPokemonPersistanceService.swift; sourceTree = "<group>"; };
 		53FC31FD26DF5B31007F48EE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		53FC320D26DF6963007F48EE /* PersistenceStartupProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStartupProcess.swift; sourceTree = "<group>"; };
+		53FC320F26DF83CD007F48EE /* UIView-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
+		53FC321426DF8DD2007F48EE /* NavigationBarSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSetupable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -672,6 +676,7 @@
 		53FC314026DC49A6007F48EE /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				53FC321226DF8DB3007F48EE /* View */,
 				53FC31C426DE90C1007F48EE /* Data source */,
 				53FC314126DC49B0007F48EE /* General */,
 			);
@@ -695,6 +700,7 @@
 				53FC314F26DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift */,
 				53FC31BE26DE87DA007F48EE /* UICollectionView-NSoftJobAssignment.swift */,
 				53FC31CE26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift */,
+				53FC320F26DF83CD007F48EE /* UIView-NSoftJobAssignment.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1035,6 +1041,14 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		53FC321226DF8DB3007F48EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53FC321426DF8DD2007F48EE /* NavigationBarSetupable.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1338,6 +1352,7 @@
 				53FC314326DC49BC007F48EE /* Router.swift in Sources */,
 				53FC31DA26DEEBEE007F48EE /* PokemonDetailsInteractor.swift in Sources */,
 				53FC315026DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift in Sources */,
+				53FC321026DF83CD007F48EE /* UIView-NSoftJobAssignment.swift in Sources */,
 				53FC315826DD72D2007F48EE /* SignInPresenter.swift in Sources */,
 				53FC31D726DEEBEE007F48EE /* PokemonDetailsPresenter.swift in Sources */,
 				53FC31B026DE80FD007F48EE /* PokemonListPresenter.swift in Sources */,
@@ -1363,6 +1378,7 @@
 				53FC31AF26DE80FD007F48EE /* PokemonListContentView.swift in Sources */,
 				53FC316226DD7826007F48EE /* StartupProcess.swift in Sources */,
 				53FC314526DC4C7F007F48EE /* Globals.swift in Sources */,
+				53FC321526DF8DD2007F48EE /* NavigationBarSetupable.swift in Sources */,
 				53FC31D926DEEBEE007F48EE /* PokemonDetailsViewController.swift in Sources */,
 				53FC31BD26DE84A4007F48EE /* CompositionalLayoutVendor.swift in Sources */,
 				53FC31CD26DECF27007F48EE /* String-NSoftJobAssignment.swift in Sources */,
