@@ -39,7 +39,7 @@ class FavoritesListViewController: UIViewController, NavigationBarSetupable {
 extension FavoritesListViewController: FavoritesListDisplayLogic {
   func displayFavorites(using dataSource: FavoritesListDataSource) {
     self.dataSource = dataSource
-    contentView.tableView.reloadData()
+    UIView.transition(with: contentView.tableView, duration: 1.0, options: .transitionCrossDissolve, animations: { self.contentView.tableView.reloadData() }, completion: nil)
   }
 }
 
@@ -60,7 +60,7 @@ extension FavoritesListViewController: UITableViewDataSource {
     guard let item = dataSource?.item(at: indexPath) else {
       return UITableViewCell()
     }
-
+    
     switch item {
     case .pokemonItem(let item):
       let cell = tableView.dequeueReusableCell(FavoritesListCell.self, at: indexPath)
@@ -74,6 +74,16 @@ extension FavoritesListViewController: UITableViewDataSource {
 extension FavoritesListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     presenter?.onItemSelected(at: indexPath)
+  }
+  
+  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    return true
+  }
+  
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    if (editingStyle == .delete) {
+      presenter?.onItemDeleted(at: indexPath)
+    }
   }
 }
 

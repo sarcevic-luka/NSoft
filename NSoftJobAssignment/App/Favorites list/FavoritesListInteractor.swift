@@ -12,6 +12,7 @@ import Persistence
 import Promises
 
 protocol FavoritesListBusinessLogic: AnyObject {
+  func removePokemonFromFavorites(for pokemonDetails: PokemonDetails) -> Promise<Void>
   func getFavoritesList() -> Promise<[PokemonDetails]>
 }
 
@@ -28,5 +29,9 @@ class FavoritesListInteractor {
 extension FavoritesListInteractor: FavoritesListBusinessLogic {
   func getFavoritesList() -> Promise<[PokemonDetails]> {
     favoritesPokemonPersistanceService.getFavoritePokemons()
+  }
+  
+  func removePokemonFromFavorites(for pokemonDetails: PokemonDetails) -> Promise<Void> {
+    favoritesPokemonPersistanceService.addOrRemoveToFavorites(pokemonDetails: pokemonDetails)
   }
 }

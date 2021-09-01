@@ -12,6 +12,7 @@ protocol FavoritesListViewPresentingLogic: AnyObject {
   func onViewWillAppear()
   func onBackBarButtonItemTapped()
   func onItemSelected(at indexPath: IndexPath)
+  func onItemDeleted(at indexPath: IndexPath)
 }
 
 class FavoritesListPresenter {
@@ -36,15 +37,31 @@ extension FavoritesListPresenter: FavoritesListViewPresentingLogic {
     router.showDetails(for: pokemonItem.id)
   }
   
+  func onItemDeleted(at indexPath: IndexPath) {
+    guard let pokemonItem = dataSource?.pokemonItem(at: indexPath) else {
+      return
+    }
+    interactor?.removePokemonFromFavorites(for: pokemonItem)
+      .then { [weak self] _ in
+        self?.loadFavoritesList()
+      }
+  }
+
   func onViewWillAppear() {
+    loadFavoritesList()
+  }
+  
+  func onBackBarButtonItemTapped() {
+    router.dismiss()
+  }
+}
+
+private extension FavoritesListPresenter {
+  func loadFavoritesList() {
     interactor?.getFavoritesList()
       .then { [weak self] favoriteList in
         self?.dataSource = FavoritesListDataSource(favoritesList: favoriteList)
         self?.view?.displayFavorites(using: FavoritesListDataSource(favoritesList: favoriteList))
       }
-  }
-  
-  func onBackBarButtonItemTapped() {
-    router.dismiss()
   }
 }
