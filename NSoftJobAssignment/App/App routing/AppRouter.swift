@@ -20,7 +20,7 @@ final class AppRouter {
 }
 
 // MARK: Routing
-extension AppRouter: Router, AppRoutingLogic {
+extension AppRouter: AppRoutingLogic {
   var viewController: UIViewController? {
     UIApplication.shared.focusedWindow?.topViewController
   }

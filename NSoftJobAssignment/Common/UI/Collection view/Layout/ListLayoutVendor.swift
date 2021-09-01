@@ -15,7 +15,7 @@ public struct ListLayoutVendor {
   public let interItemSpacing: NSCollectionLayoutSpacing?
   public let interGroupSpacing: CGFloat?
   public let pinsHeaderToBoundary: Bool
-
+  
   public init(
     estimatedItemHeight: CGFloat,
     estimatedSectionHeaderHeight: CGFloat? = nil,
@@ -38,10 +38,10 @@ extension ListLayoutVendor: CompositionalLayoutVendor {
   public func vendLayout() -> UICollectionViewCompositionalLayout {
     let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(estimatedItemHeight))
     let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
+    
     let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitems: [item])
     group.interItemSpacing = interItemSpacing ?? group.interItemSpacing
-
+    
     let header: NSCollectionLayoutBoundarySupplementaryItem? = {
       guard let estimatedSectionHeaderHeight = estimatedSectionHeaderHeight else { return nil }
       let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(estimatedSectionHeaderHeight))
@@ -49,18 +49,18 @@ extension ListLayoutVendor: CompositionalLayoutVendor {
       header.pinToVisibleBounds = pinsHeaderToBoundary
       return header
     }()
-
+    
     let footer: NSCollectionLayoutBoundarySupplementaryItem? = {
       guard let estimatedSectionFooterHeight = estimatedSectionFooterHeight else { return nil }
       let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(estimatedSectionFooterHeight))
       return NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
     }()
-
+    
     let section = NSCollectionLayoutSection(group: group)
     section.boundarySupplementaryItems = [header, footer].compactMap { $0 }
     section.contentInsets = sectionInsets ?? section.contentInsets
     section.interGroupSpacing = interGroupSpacing ?? section.interGroupSpacing
-
+    
     return UICollectionViewCompositionalLayout(section: section)
   }
 }

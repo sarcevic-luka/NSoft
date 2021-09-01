@@ -17,8 +17,7 @@ protocol SignInBusinessLogic: AnyObject {
 class SignInInteractor {
   private let appData: AppDataProtocol
   private let persistenceStartupProcess: PersistenceStartupProcessProtocol
-  
-
+    
   init(appData: AppDataProtocol = AppData(),
        persistenceStartupProcess: PersistenceStartupProcessProtocol = PersistenceStartupProcess()) {
     self.appData = appData

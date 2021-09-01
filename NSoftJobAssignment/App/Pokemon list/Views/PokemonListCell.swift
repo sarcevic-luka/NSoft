@@ -16,12 +16,12 @@ class PokemonListCell: UICollectionViewCell {
   private(set) lazy var containerView = UIView()
   private lazy var indicatorView = UIActivityIndicatorView()
   private lazy var titleLabel = UILabel()
-
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupViews()
   }
-
+  
   @available(*, unavailable)
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
@@ -48,11 +48,11 @@ private extension PokemonListCell {
     setupContainerView()
     setupTitleLabel()
   }
-
+  
   func setupView() {
     contentView.backgroundColor = .clear
   }
-
+  
   func setupIndicatorView() {
     addSubview(indicatorView)
     indicatorView.snp.makeConstraints {

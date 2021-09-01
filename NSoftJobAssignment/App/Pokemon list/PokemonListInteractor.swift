@@ -17,7 +17,7 @@ protocol PokemonListBusinessLogic: AnyObject {
 
 class PokemonListInteractor {
   private let pokemonListNetworkService: PokemonListNetworkServiceProtocol
-
+  
   init(pokemonListNetworkService: PokemonListNetworkServiceProtocol = PokemonListNetworkService()) {
     self.pokemonListNetworkService = pokemonListNetworkService
   }

@@ -14,7 +14,6 @@ protocol PokemonListViewPresentingLogic: AnyObject {
   func onPrefetchRequested()
   func onItemSelected(at indexPath: IndexPath)
   func onViewDidLoad()
-
 }
 
 class PokemonListPresenter {
@@ -72,7 +71,6 @@ private extension PokemonListPresenter {
       .catch { [weak self] error in
         self?.view?.displayMessagePopup(with: .customError(error.localizedDescription))
       }
-
       .always { [weak self] in
         self?.isFetchInProgress = false
       }

@@ -49,7 +49,6 @@
 		53FC313A26DC08E4007F48EE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 53FC313926DC08E4007F48EE /* KeychainAccess */; };
 		53FC313C26DC1AC8007F48EE /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC313B26DC1AC8007F48EE /* JSONFormatter.swift */; };
 		53FC313F26DC493E007F48EE /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC313E26DC493E007F48EE /* AppRouter.swift */; };
-		53FC314326DC49BC007F48EE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314226DC49BC007F48EE /* Router.swift */; };
 		53FC314526DC4C7F007F48EE /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314426DC4C7F007F48EE /* Globals.swift */; };
 		53FC314826DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314726DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift */; };
 		53FC314C26DCB94B007F48EE /* AppDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC314B26DCB94B007F48EE /* AppDataProtocol.swift */; };
@@ -280,7 +279,6 @@
 		53FC311726DC07F2007F48EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53FC313B26DC1AC8007F48EE /* JSONFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
 		53FC313E26DC493E007F48EE /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
-		53FC314226DC49BC007F48EE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		53FC314426DC4C7F007F48EE /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		53FC314726DCB85D007F48EE /* UIApplication-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
 		53FC314B26DCB94B007F48EE /* AppDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataProtocol.swift; sourceTree = "<group>"; };
@@ -421,7 +419,6 @@
 			children = (
 				53FC308726D98D18007F48EE /* NSoftJobAssignment */,
 				53FC317526DE690A007F48EE /* Assets */,
-				53FC312026DC086E007F48EE /* Frameworks */,
 				53FC30BB26DAD4F3007F48EE /* Model */,
 				53FC30D626DB8832007F48EE /* Networking */,
 				53FC31E226DF5240007F48EE /* Persistence */,
@@ -681,13 +678,6 @@
 			path = SPMLibaries;
 			sourceTree = "<group>";
 		};
-		53FC312026DC086E007F48EE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		53FC313D26DC4930007F48EE /* App routing */ = {
 			isa = PBXGroup;
 			children = (
@@ -711,7 +701,6 @@
 			children = (
 				53FC314426DC4C7F007F48EE /* Globals.swift */,
 				53FC31C026DE8806007F48EE /* ReusableView.swift */,
-				53FC314226DC49BC007F48EE /* Router.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1422,7 +1411,6 @@
 			files = (
 				53FC31CB26DE91E6007F48EE /* DataSourceProtocol.swift in Sources */,
 				53FC31B126DE80FD007F48EE /* PokemonListRouter.swift in Sources */,
-				53FC314326DC49BC007F48EE /* Router.swift in Sources */,
 				53FC31DA26DEEBEE007F48EE /* PokemonDetailsInteractor.swift in Sources */,
 				53FC315026DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift in Sources */,
 				53FC321026DF83CD007F48EE /* UIView-NSoftJobAssignment.swift in Sources */,

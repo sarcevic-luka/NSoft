@@ -35,7 +35,7 @@ extension UIWindow {
 extension UIWindow {
   var topViewController: UIViewController? {
     var top = rootViewController
-
+    
     while true {
       if let presented = top?.presentedViewController {
         top = presented

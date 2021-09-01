@@ -16,7 +16,7 @@ public struct PokemonDetailsDBO: FetchableRecord, PersistableRecord {
   public let baseExperience: Int
   public let weight: Int
   public let types: String
-
+  
   public init(pokemonId: Int,
               name: String,
               baseExperience: Int,

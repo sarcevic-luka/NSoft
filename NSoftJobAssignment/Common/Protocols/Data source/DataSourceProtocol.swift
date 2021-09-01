@@ -23,20 +23,20 @@ extension DataSourceProtocol {
     }
     return false
   }
-
+  
   func numberOfSections() -> Int {
     return sections.count
   }
-
+  
   func numberOfItems(in section: Int) -> Int {
     guard let section = sections[safe: section] else { return 0 }
     return section.isCollapsed ? 0 : section.items.count
   }
-
+  
   func section(at index: Int) -> SectionType? {
     return sections[safe: index]
   }
-
+  
   func item(at indexPath: IndexPath) -> SectionType.Item? {
     return section(at: indexPath.section)?.item(at: indexPath.item)
   }
@@ -53,7 +53,7 @@ extension DataBackedDataSourceProtocol where Data.Index == Int {
   func element(at indexPath: IndexPath) -> Data.Element? {
     rows[safe: indexPath.item]
   }
-
+  
   func element(where: @escaping (Data.Element) -> Bool) -> Data.Element? {
     rows.first(where: `where`)
   }

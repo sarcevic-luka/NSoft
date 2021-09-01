@@ -16,7 +16,7 @@ extension ActionButton {
     actionButton.addTarget(target, action: selector, for: .touchUpInside)
     return actionButton
   }
-
+  
   static func continueLogin(target: Any, selector: Selector) -> Self {
     let actionButton = Self(type: .custom)
     actionButton.isEnabled = false

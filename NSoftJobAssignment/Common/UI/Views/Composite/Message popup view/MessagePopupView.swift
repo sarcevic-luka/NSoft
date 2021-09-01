@@ -24,7 +24,7 @@ open class MessagePopupView: UIView {
     super.init(frame: .zero)
     setupViews()
   }
-
+  
   @available(*, unavailable)
   public required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
@@ -71,7 +71,6 @@ private extension MessagePopupView {
     }
     imageView.image = context.image
   }
-
   
   func setupStackView() {
     addSubview(verticalStackView)

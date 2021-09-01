@@ -13,7 +13,7 @@ class PokemonListContentView: UIView {
   private lazy var layout = ListLayoutVendor(estimatedItemHeight: estimatedItemHeight, sectionInsets: sectionInsets, interGroupSpacing: CGFloat(12)).vendLayout()
   private let sectionInsets = NSDirectionalEdgeInsets(top: 16, leading: 20, bottom: 12, trailing: 20)
   private let estimatedItemHeight: CGFloat = 60
-
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupViews()
@@ -34,7 +34,7 @@ private extension PokemonListContentView {
   func setupView() {
     backgroundColor = .white
   }
-
+  
   func setupCollectionView() {
     addSubview(collectionView)
     collectionView.snp.makeConstraints {
