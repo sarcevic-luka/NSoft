@@ -7,14 +7,18 @@
 //
 
 import Foundation
+import Model
 
 protocol PokemonDetailsViewPresentingLogic: AnyObject {
   func onViewWillAppear()
+  func onBackBarButtonItemTapped()
+  func onFavoritesButtonTapped()
 }
 
 class PokemonDetailsPresenter {
   var interactor: PokemonDetailsBusinessLogic?
   weak private var view: PokemonDetailsDisplayLogic?
+  private var pokemonDetails: PokemonDetails?
   private let pokemonId: Int
   private let router: PokemonDetailsRoutingLogic
   
@@ -29,7 +33,22 @@ class PokemonDetailsPresenter {
 // MARK: - PokemonDetailsViewPresentingLogic
 extension PokemonDetailsPresenter: PokemonDetailsViewPresentingLogic {
   func onViewWillAppear() {
+    getPokemonFavoriteStatus()
     getAndSetPokemonDetails()
+  }
+
+  func onBackBarButtonItemTapped() {
+    router.dismiss()
+  }
+
+  func onFavoritesButtonTapped() {
+    guard let details = pokemonDetails else {
+      return
+    }
+    interactor?.addOrRemovePokemonFromFavorites(for: details)
+      .then { [weak self] in
+        self?.getPokemonFavoriteStatus()
+      }
   }
 }
 
@@ -38,10 +57,18 @@ private extension PokemonDetailsPresenter {
   func getAndSetPokemonDetails() {
     interactor?.getPokemonsDetails(for: pokemonId)
       .then { [weak self] pokemonDetails in
+        self?.pokemonDetails = pokemonDetails
         self?.view?.display(pokemonDetails: pokemonDetails)
       }
       .catch { errpr in
         print(errpr)
+      }
+  }
+  
+  func getPokemonFavoriteStatus() {
+    interactor?.isPokemonFavourite(for: pokemonId)
+      .then { [weak self] isFavorite in
+        self?.view?.displayButton(isFavorite: isFavorite)
       }
   }
 }

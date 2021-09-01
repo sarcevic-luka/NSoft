@@ -6,8 +6,17 @@
 //
 
 import UIKit
+import Assets
 
 extension UIBarButtonItem {
+  static func back(target: Any, action: Selector) -> UIBarButtonItem {
+    UIBarButtonItem(
+      image: ImageAssets.Icons.back.image,
+      style: .done,
+      target: target,
+      action: action)
+  }
+  
   static func favourites(target: Any, action: Selector) -> UIBarButtonItem {
     let logoutBarButton = UIBarButtonItem(title: "Favourites",
                                           style: .done,

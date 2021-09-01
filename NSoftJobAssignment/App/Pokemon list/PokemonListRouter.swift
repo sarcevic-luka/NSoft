@@ -44,4 +44,8 @@ extension PokemonListRouter: PokemonListRoutingLogic {
   }
 }
 
-extension PokemonListRouter: PokemonDetailsRouterDelegate { }
+extension PokemonListRouter: PokemonDetailsRouterDelegate {
+  func pokemonDetailsRouterRequestedDismissal() {
+    viewController?.navigationController?.popViewController(animated: true)
+  }
+}

@@ -12,7 +12,7 @@ import Combine
 import GRDB
 
 public protocol FavoritesPokemonPersistanceServiceProtocol {
-  func addOrRemoveToFavorites(pokemonDetails: PokemonDetails)
+  func addOrRemoveToFavorites(pokemonDetails: PokemonDetails) -> Promise<Void>
   func getFavoritePokemons() -> Promise<[PokemonDetails]>
   func pokemonIsInFavorites(pokemonId: Int) -> Promise<Bool>
 }
@@ -22,7 +22,7 @@ public final class FavoritesPokemonPersistanceService {
 }
 
 extension FavoritesPokemonPersistanceService: FavoritesPokemonPersistanceServiceProtocol {
-  public func addOrRemoveToFavorites(pokemonDetails: PokemonDetails) {
+  public func addOrRemoveToFavorites(pokemonDetails: PokemonDetails) -> Promise<Void> {
     pokemonIsInFavorites(pokemonId: pokemonDetails.id)
       .then { [weak self] pokemonIsInFavorites in
         if pokemonIsInFavorites == true {
@@ -30,6 +30,7 @@ extension FavoritesPokemonPersistanceService: FavoritesPokemonPersistanceService
         } else {
           self?.addPokemonToFavorites(pokemonDetails: pokemonDetails)
         }
+        return Promise(())
       }
   }
   

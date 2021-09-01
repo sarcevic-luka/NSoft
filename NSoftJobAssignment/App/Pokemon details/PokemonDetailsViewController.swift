@@ -11,10 +11,12 @@ import Model
 
 protocol PokemonDetailsDisplayLogic: AnyObject {
   func display(pokemonDetails: PokemonDetails)
+  func displayButton(isFavorite: Bool)
 }
 
-class PokemonDetailsViewController: UIViewController {
+class PokemonDetailsViewController: UIViewController, NavigationBarSetupable {
   var presenter: PokemonDetailsViewPresentingLogic?
+  var backButtonTapSelector: Selector { #selector(backBarButtonItemTapped) }
   private lazy var contentView = PokemonDetailsContentView()
   
   override func loadView() {
@@ -29,22 +31,40 @@ class PokemonDetailsViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     presenter?.onViewWillAppear()
+    setupNaviagtionBar()
   }
 }
 
 // MARK: - PokemonDetailsDisplayLogic
 extension PokemonDetailsViewController: PokemonDetailsDisplayLogic {
   func display(pokemonDetails: PokemonDetails) {
-    contentView.update(pokemonDetails: pokemonDetails, isFavorite: true)
+    contentView.update(pokemonDetails: pokemonDetails)
+    title = pokemonDetails.name.capitalizingFirstLetter()
+  }
+  
+  func displayButton(isFavorite: Bool) {
+    contentView.setButton(isFavorite: isFavorite)
   }
 }
 
+// MARK: - Private Methods
+private extension PokemonDetailsViewController {
+  @objc func backBarButtonItemTapped() {
+    presenter?.onBackBarButtonItemTapped()
+  }
+}
 private extension PokemonDetailsViewController {
   func setupView() {
     setupContentView()
   }
   
   func setupContentView() {
-
+    contentView.favoritesTapHandler = { [weak self] in
+      self?.presenter?.onFavoritesButtonTapped()
+    }
+  }
+  
+  func setupNaviagtionBar() {
+    setupDefaultBackButtonItem()
   }
 }

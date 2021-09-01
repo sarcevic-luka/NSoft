@@ -14,6 +14,7 @@ import SnapKit
 
 class PokemonDetailsContentView: UIView {
   var favoritesTapHandler: Action?
+  private lazy var activityIndicatorView = UIActivityIndicatorView()
   private lazy var imageView = UIImageView()
   private lazy var verticalTitlesStackView = UIStackView()
   private lazy var verticalValuesStackView = UIStackView()
@@ -24,37 +25,45 @@ class PokemonDetailsContentView: UIView {
   private lazy var typesTitleLabel = UILabel()
   private lazy var typesValueLabel = UILabel()
   private(set) var favoritesButton = ActionButton.favorites(target: self, selector: #selector(favoritesButtonTapped))
-  private var defaultWidthMultiplier: CGFloat { 335.0 / 375.0 }
-
+  private var defaultWidthMultiplier: CGFloat { 280.0 / 375.0 }
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupViews()
   }
-
+  
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 }
 
 extension PokemonDetailsContentView {
-  func update(pokemonDetails: PokemonDetails, isFavorite: Bool) {
+  func update(pokemonDetails: PokemonDetails) {
     baseExperienceValueLabel.text = "\(pokemonDetails.baseExperience)"
     weightValueLabel.text = "\(pokemonDetails.weight)"
     let allTypes = pokemonDetails.types.map { "\($0.type.name)" }
     typesValueLabel.text = allTypes.joined(separator: "/")
-
+    
     let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(pokemonDetails.id).png")
     imageView.kf.setImage(
       with: url,
       placeholder: ImageAssets.Icons.pokeball.image,
       options: [
-          .transition(.fade(1)),
-          .cacheOriginalImage
+        .transition(.fade(1)),
+        .cacheOriginalImage
       ])
     
-    //    favoritesButton.setTitle(willRemoveOnTouch ? "Remove from favorites" : "Add to favorites", for: .normal)
-    //    favoritesButton.backgroundColor = willRemoveOnTouch ? ColorAssets.General.pokeRed.color : ColorAssets.General.pokeBlue.color
-
+    
+    activityIndicatorView.stopAnimating()
+    verticalValuesStackView.fadeIn()
+    verticalTitlesStackView.fadeIn()
+  }
+  
+  func setButton(isFavorite: Bool) {
+    favoritesButton.fadeOut()
+    favoritesButton.setTitle(isFavorite ? "Remove from favorites" : "Add to favorites", for: .normal)
+    favoritesButton.backgroundColor = isFavorite ? ColorAssets.General.pokeRed.color : ColorAssets.General.pokeBlue.color
+    favoritesButton.fadeIn()
   }
 }
 
@@ -75,6 +84,7 @@ private extension PokemonDetailsContentView {
     setupTitlesLabels()
     setupValuesLabels()
     setupFavoritesButton()
+    setupActivityIndicatorViewView()
   }
   
   func setupView() {
@@ -84,9 +94,9 @@ private extension PokemonDetailsContentView {
   func setupImageView() {
     addSubview(imageView)
     imageView.snp.makeConstraints {
-      $0.top.equalTo(safeAreaLayoutGuide).inset(30)
+      $0.top.equalTo(safeAreaLayoutGuide).inset(50)
       $0.centerX.equalToSuperview()
-      $0.size.equalTo(140)
+      $0.size.equalTo(180)
     }
     imageView.image = ImageAssets.Icons.pokeball.image
     imageView.layer.borderWidth = 1
@@ -130,25 +140,40 @@ private extension PokemonDetailsContentView {
       label.textColor = ColorAssets.General.pokeLightGray.color
       verticalTitlesStackView.addArrangedSubview(label)
     }
+    verticalTitlesStackView.alpha = 0
   }
   
   func setupValuesLabels() {
     let stackViewTitles = [baseExperienceValueLabel, typesValueLabel, weightValueLabel]
-
+    
     stackViewTitles.forEach { label in
       label.font = .systemFont(ofSize: 16, weight: .medium)
       label.textColor = ColorAssets.General.pokeLightGray.color
       label.text = " "
       verticalValuesStackView.addArrangedSubview(label)
     }
+    verticalValuesStackView.alpha = 0
   }
-
+  
   func setupFavoritesButton() {
     addSubview(favoritesButton)
-    (favoritesButton).snp.makeConstraints {
+    favoritesButton.snp.makeConstraints {
       $0.bottom.equalToSuperview().inset(45)
       $0.centerX.equalToSuperview()
       $0.width.equalToSuperview().multipliedBy(defaultWidthMultiplier)
     }
+    favoritesButton.alpha = 0
+  }
+  
+  func setupActivityIndicatorViewView() {
+    addSubview(activityIndicatorView)
+    activityIndicatorView.snp.makeConstraints {
+      $0.centerX.equalToSuperview()
+      $0.centerY.equalTo(verticalTitlesStackView.snp.centerY)
+    }
+    activityIndicatorView.style = .large
+    activityIndicatorView.color = ColorAssets.General.pokeRed.color
+    activityIndicatorView.hidesWhenStopped = true
+    activityIndicatorView.startAnimating()
   }
 }

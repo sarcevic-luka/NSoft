@@ -9,22 +9,37 @@
 import Foundation
 import Networking
 import Model
+import Persistence
 import Promises
 
 protocol PokemonDetailsBusinessLogic: AnyObject {
   func getPokemonsDetails(for pokemonId: Int) -> Promise<PokemonDetails>
+  func addOrRemovePokemonFromFavorites(for pokemonDetails: PokemonDetails) -> Promise<Void>
+  func isPokemonFavourite(for pokemonId: Int) -> Promise<Bool>
 }
 
 class PokemonDetailsInteractor {
   private let pokemonListNetworkService: PokemonListNetworkServiceProtocol
+  private let favoritesPokemonPersistanceService: FavoritesPokemonPersistanceServiceProtocol
 
-  init(pokemonListNetworkService: PokemonListNetworkServiceProtocol = PokemonListNetworkService()) {
+  init(pokemonListNetworkService: PokemonListNetworkServiceProtocol = PokemonListNetworkService(),
+       favoritesPokemonPersistanceService: FavoritesPokemonPersistanceServiceProtocol = FavoritesPokemonPersistanceService()
+  ) {
     self.pokemonListNetworkService = pokemonListNetworkService
+    self.favoritesPokemonPersistanceService = favoritesPokemonPersistanceService
   }
 }
 
 // MARK: - PokemonDetailsBusinessLogic
 extension PokemonDetailsInteractor: PokemonDetailsBusinessLogic {
+  func addOrRemovePokemonFromFavorites(for pokemonDetails: PokemonDetails) -> Promise<Void> {
+    favoritesPokemonPersistanceService.addOrRemoveToFavorites(pokemonDetails: pokemonDetails)
+  }
+  
+  func isPokemonFavourite(for pokemonId: Int) -> Promise<Bool> {
+    favoritesPokemonPersistanceService.pokemonIsInFavorites(pokemonId: pokemonId)
+  }
+  
   func getPokemonsDetails(for pokemonId: Int) -> Promise<PokemonDetails> {
     pokemonListNetworkService.getPokemonDetails(for: pokemonId)
   }

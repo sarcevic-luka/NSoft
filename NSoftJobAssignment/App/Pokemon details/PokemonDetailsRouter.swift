@@ -8,9 +8,13 @@
 
 import UIKit
 
-protocol PokemonDetailsRoutingLogic: AnyObject { }
+protocol PokemonDetailsRoutingLogic: AnyObject {
+  func dismiss()
+}
 
-protocol PokemonDetailsRouterDelegate: AnyObject { }
+protocol PokemonDetailsRouterDelegate: AnyObject {
+  func pokemonDetailsRouterRequestedDismissal()
+}
 
 class PokemonDetailsRouter {
   weak var viewController: PokemonDetailsViewController?
@@ -29,4 +33,8 @@ class PokemonDetailsRouter {
 }
 
 // MARK: - PokemonDetailsRoutingLogic
-extension PokemonDetailsRouter: PokemonDetailsRoutingLogic { }
+extension PokemonDetailsRouter: PokemonDetailsRoutingLogic {
+  func dismiss() {
+    delegate?.pokemonDetailsRouterRequestedDismissal()
+  }
+}

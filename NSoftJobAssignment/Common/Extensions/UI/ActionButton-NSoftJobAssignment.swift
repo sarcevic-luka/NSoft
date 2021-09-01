@@ -19,8 +19,6 @@ extension ActionButton {
   
   static func favorites(target: Any, selector: Selector) -> Self {
     let actionButton = Self(type: .custom)
-    actionButton.isEnabled = false
-    actionButton.setTitle("Add to favorites", for: .normal)
     actionButton.setTitle("Remove from favorites", for: .application)
     actionButton.style = .default
     actionButton.addTarget(target, action: selector, for: .touchUpInside)
