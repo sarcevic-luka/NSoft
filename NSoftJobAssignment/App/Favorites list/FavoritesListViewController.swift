@@ -53,7 +53,12 @@ private extension FavoritesListViewController {
 // MARK: - UITableViewDataSource
 extension FavoritesListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    dataSource?.numberOfItems(in: section) ?? 0
+    if dataSource?.favoritesList.count == 0 {
+      contentView.tableView.setEmptyMessage("POKEMONS MISSING! \n Add your favorite Pokemons \n to see them \n on the list!")
+    } else {
+      contentView.tableView.restore()
+    }
+    return dataSource?.numberOfItems(in: section) ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Assets
 
 public extension UITableView {
   func register<T: UITableViewCell>(_: T.Type) {
@@ -25,6 +26,25 @@ public extension UITableView {
       return T()
     }
     return cell
+  }
+}
+
+extension UITableView {
+  func setEmptyMessage(_ message: String) {
+    let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+    messageLabel.text = message
+    messageLabel.textColor = ColorAssets.General.pokeRed.color
+    messageLabel.numberOfLines = 0
+    messageLabel.textAlignment = .center
+    messageLabel.font = .systemFont(ofSize: 24, weight: .medium)
+    messageLabel.sizeToFit()
+    
+    self.backgroundView = messageLabel
+    self.separatorStyle = .none
+  }
+  
+  func restore() {
+    self.backgroundView = nil
   }
 }
 

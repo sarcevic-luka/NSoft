@@ -135,7 +135,7 @@ private extension PokemonDetailsContentView {
     weightTitleLabel.text = "Weight:"
     
     stackViewTitles.forEach { label in
-      label.font = .systemFont(ofSize: 16, weight: .medium)
+      label.font = .systemFont(ofSize: 16, weight: .heavy)
       label.textColor = ColorAssets.General.pokeLightGray.color
       verticalTitlesStackView.addArrangedSubview(label)
     }
