@@ -59,12 +59,12 @@ extension PokemonListDataSource {
 private extension PokemonListDataSource {
   func buildSections() {
     sections.removeAll()
-    if let appointmentsList = createMedicationsSection() {
-      sections.append(appointmentsList)
+    if let pokemonsList = createPokemonListSection() {
+      sections.append(pokemonsList)
     }
   }
   
-  func createMedicationsSection() -> PokemonListDataSourceSection? {
+  func createPokemonListSection() -> PokemonListDataSourceSection? {
     let items = pokemonList.results.map { PokemonListDataSourceItem.pokemonItem(PokemonListCell.ViewModel(name: $0.name.capitalizingFirstLetter())) }
     return .pokemonsList(items)
   }

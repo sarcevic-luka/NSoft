@@ -35,7 +35,8 @@ class PokemonListRouter {
 // MARK: - PokemonListRoutingLogic
 extension PokemonListRouter: PokemonListRoutingLogic {
   func showFavouritesList() {
-    #warning("Implement")
+    let favoritesListScene = FavoritesListRouter.createModule(delegate: self)
+    viewController?.navigationController?.pushViewController(favoritesListScene, animated: true)
   }
   
   func showDetails(for pokemonId: Int) {
@@ -46,6 +47,12 @@ extension PokemonListRouter: PokemonListRoutingLogic {
 
 extension PokemonListRouter: PokemonDetailsRouterDelegate {
   func pokemonDetailsRouterRequestedDismissal() {
+    viewController?.navigationController?.popViewController(animated: true)
+  }
+}
+
+extension PokemonListRouter: FavoritesListRouterDelegate {
+  func favoritesListRouterRequestedDismissal() {
     viewController?.navigationController?.popViewController(animated: true)
   }
 }

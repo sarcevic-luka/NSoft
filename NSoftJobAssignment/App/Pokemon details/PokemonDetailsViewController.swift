@@ -53,6 +53,7 @@ private extension PokemonDetailsViewController {
     presenter?.onBackBarButtonItemTapped()
   }
 }
+
 private extension PokemonDetailsViewController {
   func setupView() {
     setupContentView()

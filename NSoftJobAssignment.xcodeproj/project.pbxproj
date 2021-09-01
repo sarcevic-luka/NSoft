@@ -118,6 +118,14 @@
 		53FC320E26DF6963007F48EE /* PersistenceStartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC320D26DF6963007F48EE /* PersistenceStartupProcess.swift */; };
 		53FC321026DF83CD007F48EE /* UIView-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC320F26DF83CD007F48EE /* UIView-NSoftJobAssignment.swift */; };
 		53FC321526DF8DD2007F48EE /* NavigationBarSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC321426DF8DD2007F48EE /* NavigationBarSetupable.swift */; };
+		53FC321D26DF9FFC007F48EE /* FavoritesListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC321826DF9FFC007F48EE /* FavoritesListContentView.swift */; };
+		53FC321E26DF9FFC007F48EE /* FavoritesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC321926DF9FFC007F48EE /* FavoritesListPresenter.swift */; };
+		53FC321F26DF9FFC007F48EE /* FavoritesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC321A26DF9FFC007F48EE /* FavoritesListRouter.swift */; };
+		53FC322026DF9FFC007F48EE /* FavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC321B26DF9FFC007F48EE /* FavoritesListViewController.swift */; };
+		53FC322126DF9FFC007F48EE /* FavoritesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC321C26DF9FFC007F48EE /* FavoritesListInteractor.swift */; };
+		53FC322426DFA37B007F48EE /* FavoritesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC322326DFA37B007F48EE /* FavoritesListCell.swift */; };
+		53FC322626DFAA3A007F48EE /* UITableView-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC322526DFAA3A007F48EE /* UITableView-NSoftJobAssignment.swift */; };
+		53FC322826DFAAC9007F48EE /* FavoritesListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC322726DFAAC9007F48EE /* FavoritesListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -330,6 +338,14 @@
 		53FC320D26DF6963007F48EE /* PersistenceStartupProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStartupProcess.swift; sourceTree = "<group>"; };
 		53FC320F26DF83CD007F48EE /* UIView-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
 		53FC321426DF8DD2007F48EE /* NavigationBarSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSetupable.swift; sourceTree = "<group>"; };
+		53FC321826DF9FFC007F48EE /* FavoritesListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListContentView.swift; sourceTree = "<group>"; };
+		53FC321926DF9FFC007F48EE /* FavoritesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListPresenter.swift; sourceTree = "<group>"; };
+		53FC321A26DF9FFC007F48EE /* FavoritesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListRouter.swift; sourceTree = "<group>"; };
+		53FC321B26DF9FFC007F48EE /* FavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewController.swift; sourceTree = "<group>"; };
+		53FC321C26DF9FFC007F48EE /* FavoritesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListInteractor.swift; sourceTree = "<group>"; };
+		53FC322326DFA37B007F48EE /* FavoritesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListCell.swift; sourceTree = "<group>"; };
+		53FC322526DFAA3A007F48EE /* UITableView-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
+		53FC322726DFAAC9007F48EE /* FavoritesListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,6 +453,7 @@
 			children = (
 				53FC308826D98D18007F48EE /* AppDelegate.swift */,
 				53FC313D26DC4930007F48EE /* App routing */,
+				53FC321626DF9FDD007F48EE /* Favorites list */,
 				53FC31D026DEEBD4007F48EE /* Pokemon details */,
 				53FC31A926DE80E3007F48EE /* Pokemon list */,
 				53FC315126DD70DC007F48EE /* Sign in */,
@@ -701,6 +718,7 @@
 				53FC31BE26DE87DA007F48EE /* UICollectionView-NSoftJobAssignment.swift */,
 				53FC31CE26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift */,
 				53FC320F26DF83CD007F48EE /* UIView-NSoftJobAssignment.swift */,
+				53FC322526DFAA3A007F48EE /* UITableView-NSoftJobAssignment.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1049,6 +1067,36 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		53FC321626DF9FDD007F48EE /* Favorites list */ = {
+			isa = PBXGroup;
+			children = (
+				53FC322226DFA0AE007F48EE /* Data source */,
+				53FC321726DF9FEB007F48EE /* Views */,
+				53FC321926DF9FFC007F48EE /* FavoritesListPresenter.swift */,
+				53FC321A26DF9FFC007F48EE /* FavoritesListRouter.swift */,
+				53FC321B26DF9FFC007F48EE /* FavoritesListViewController.swift */,
+				53FC321C26DF9FFC007F48EE /* FavoritesListInteractor.swift */,
+			);
+			path = "Favorites list";
+			sourceTree = "<group>";
+		};
+		53FC321726DF9FEB007F48EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				53FC321826DF9FFC007F48EE /* FavoritesListContentView.swift */,
+				53FC322326DFA37B007F48EE /* FavoritesListCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		53FC322226DFA0AE007F48EE /* Data source */ = {
+			isa = PBXGroup;
+			children = (
+				53FC322726DFAAC9007F48EE /* FavoritesListDataSource.swift */,
+			);
+			path = "Data source";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1354,6 +1402,7 @@
 				53FC315026DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift in Sources */,
 				53FC321026DF83CD007F48EE /* UIView-NSoftJobAssignment.swift in Sources */,
 				53FC315826DD72D2007F48EE /* SignInPresenter.swift in Sources */,
+				53FC322626DFAA3A007F48EE /* UITableView-NSoftJobAssignment.swift in Sources */,
 				53FC31D726DEEBEE007F48EE /* PokemonDetailsPresenter.swift in Sources */,
 				53FC31B026DE80FD007F48EE /* PokemonListPresenter.swift in Sources */,
 				53FC316E26DE219E007F48EE /* ActionButton-NSoftJobAssignment.swift in Sources */,
@@ -1364,6 +1413,7 @@
 				53FC31A326DE6EC9007F48EE /* ImageDummy.swift in Sources */,
 				53FC31D826DEEBEE007F48EE /* PokemonDetailsRouter.swift in Sources */,
 				53FC314C26DCB94B007F48EE /* AppDataProtocol.swift in Sources */,
+				53FC322426DFA37B007F48EE /* FavoritesListCell.swift in Sources */,
 				53FC31C326DE8B80007F48EE /* PokemonListDataSource.swift in Sources */,
 				53FC315A26DD72D2007F48EE /* SignInViewController.swift in Sources */,
 				53FC31BF26DE87DA007F48EE /* UICollectionView-NSoftJobAssignment.swift in Sources */,
@@ -1375,20 +1425,26 @@
 				53FC31C626DE90D2007F48EE /* SectionProtocol.swift in Sources */,
 				53FC316626DD7B2A007F48EE /* AppearanceCustomisationStartupProcess.swift in Sources */,
 				53FC308926D98D18007F48EE /* AppDelegate.swift in Sources */,
+				53FC322826DFAAC9007F48EE /* FavoritesListDataSource.swift in Sources */,
 				53FC31AF26DE80FD007F48EE /* PokemonListContentView.swift in Sources */,
 				53FC316226DD7826007F48EE /* StartupProcess.swift in Sources */,
 				53FC314526DC4C7F007F48EE /* Globals.swift in Sources */,
 				53FC321526DF8DD2007F48EE /* NavigationBarSetupable.swift in Sources */,
 				53FC31D926DEEBEE007F48EE /* PokemonDetailsViewController.swift in Sources */,
 				53FC31BD26DE84A4007F48EE /* CompositionalLayoutVendor.swift in Sources */,
+				53FC322126DF9FFC007F48EE /* FavoritesListInteractor.swift in Sources */,
+				53FC321E26DF9FFC007F48EE /* FavoritesListPresenter.swift in Sources */,
 				53FC31CD26DECF27007F48EE /* String-NSoftJobAssignment.swift in Sources */,
 				53FC31CF26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift in Sources */,
 				53FC31B726DE8141007F48EE /* PokemonListCell.swift in Sources */,
+				53FC321D26DF9FFC007F48EE /* FavoritesListContentView.swift in Sources */,
 				53FC31D626DEEBEE007F48EE /* PokemonDetailsContentView.swift in Sources */,
+				53FC322026DF9FFC007F48EE /* FavoritesListViewController.swift in Sources */,
 				53FC315726DD72D2007F48EE /* SignInContentView.swift in Sources */,
 				53FC31C926DE9156007F48EE /* Collection-NSoftJobAssignment.swift in Sources */,
 				53FC315B26DD72D2007F48EE /* SignInInteractor.swift in Sources */,
 				53FC313F26DC493E007F48EE /* AppRouter.swift in Sources */,
+				53FC321F26DF9FFC007F48EE /* FavoritesListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

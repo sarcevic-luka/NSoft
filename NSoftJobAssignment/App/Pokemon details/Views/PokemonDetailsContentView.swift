@@ -53,7 +53,6 @@ extension PokemonDetailsContentView {
         .cacheOriginalImage
       ])
     
-    
     activityIndicatorView.stopAnimating()
     verticalValuesStackView.fadeIn()
     verticalTitlesStackView.fadeIn()
