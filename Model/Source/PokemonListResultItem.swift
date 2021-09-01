@@ -9,7 +9,7 @@ import Foundation
 
 public struct PokemonListResultItem {
   public let name: String
-  public let url: String
+  public let url: URL
 }
  
 extension PokemonListResultItem: Codable { }

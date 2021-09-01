@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Persistence
 import Promises
 
 protocol SignInBusinessLogic: AnyObject {
@@ -15,18 +16,22 @@ protocol SignInBusinessLogic: AnyObject {
 
 class SignInInteractor {
   private let appData: AppDataProtocol
+  private let persistenceStartupProcess: PersistenceStartupProcessProtocol
+  
 
-  init(appData: AppDataProtocol = AppData()) {
+  init(appData: AppDataProtocol = AppData(),
+       persistenceStartupProcess: PersistenceStartupProcessProtocol = PersistenceStartupProcess()) {
     self.appData = appData
+    self.persistenceStartupProcess = persistenceStartupProcess
   }
 }
 
 // MARK: - SignInBusinessLogic
 extension SignInInteractor: SignInBusinessLogic {
   func login(username: String) -> Promise<Void> {
-    Promise { [weak self] fullfill, _ in
-      self?.appData.username = username
-      fullfill(())
-    }
+    persistenceStartupProcess.setFavorites()
+      .then { [weak self] in
+        self?.appData.username = username
+      }
   }
 }

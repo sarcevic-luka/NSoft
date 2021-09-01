@@ -12,7 +12,7 @@ protocol PokemonListViewPresentingLogic: AnyObject {
   func onFavouritesSelected()
   func onPrefetchRequested()
   func onItemSelected(at indexPath: IndexPath)
-  func onViewDidAppeared()
+  func onViewDidLoad()
 
 }
 
@@ -41,13 +41,13 @@ extension PokemonListPresenter: PokemonListViewPresentingLogic {
   }
   
   func onItemSelected(at indexPath: IndexPath) {
-    guard let pokemonItem = dataSource?.pokemonItem(at: indexPath) else {
+    guard let pokemonItem = dataSource?.pokemonItem(at: indexPath), let pokemonId = Int(pokemonItem.url.lastPathComponent) else {
       return
     }
-    router.showDetails(pokemon: pokemonItem)
+    router.showDetails(for: pokemonId)
   }
   
-  func onViewDidAppeared() {
+  func onViewDidLoad() {
     getAndSetPokemonsList()
   }
 }

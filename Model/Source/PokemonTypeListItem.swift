@@ -9,7 +9,7 @@ import Foundation
 
 public struct PokemonTypeListItem {
   public let slot: Int
-  public let type: [PokemonListResultItem]
+  public let type: PokemonListResultItem
 }
  
 extension PokemonTypeListItem: Codable { }

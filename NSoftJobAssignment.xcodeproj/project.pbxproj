@@ -99,6 +99,11 @@
 		53FC31CB26DE91E6007F48EE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31CA26DE91E6007F48EE /* DataSourceProtocol.swift */; };
 		53FC31CD26DECF27007F48EE /* String-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31CC26DECF27007F48EE /* String-NSoftJobAssignment.swift */; };
 		53FC31CF26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31CE26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift */; };
+		53FC31D626DEEBEE007F48EE /* PokemonDetailsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31D126DEEBEE007F48EE /* PokemonDetailsContentView.swift */; };
+		53FC31D726DEEBEE007F48EE /* PokemonDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31D226DEEBEE007F48EE /* PokemonDetailsPresenter.swift */; };
+		53FC31D826DEEBEE007F48EE /* PokemonDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31D326DEEBEE007F48EE /* PokemonDetailsRouter.swift */; };
+		53FC31D926DEEBEE007F48EE /* PokemonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31D426DEEBEE007F48EE /* PokemonDetailsViewController.swift */; };
+		53FC31DA26DEEBEE007F48EE /* PokemonDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC31D526DEEBEE007F48EE /* PokemonDetailsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,6 +267,11 @@
 		53FC31CA26DE91E6007F48EE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		53FC31CC26DECF27007F48EE /* String-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
 		53FC31CE26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-NSoftJobAssignment.swift"; sourceTree = "<group>"; };
+		53FC31D126DEEBEE007F48EE /* PokemonDetailsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsContentView.swift; sourceTree = "<group>"; };
+		53FC31D226DEEBEE007F48EE /* PokemonDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsPresenter.swift; sourceTree = "<group>"; };
+		53FC31D326DEEBEE007F48EE /* PokemonDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsRouter.swift; sourceTree = "<group>"; };
+		53FC31D426DEEBEE007F48EE /* PokemonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsViewController.swift; sourceTree = "<group>"; };
+		53FC31D526DEEBEE007F48EE /* PokemonDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +367,7 @@
 			children = (
 				53FC308826D98D18007F48EE /* AppDelegate.swift */,
 				53FC313D26DC4930007F48EE /* App routing */,
+				53FC31D026DEEBD4007F48EE /* Pokemon details */,
 				53FC31A926DE80E3007F48EE /* Pokemon list */,
 				53FC315126DD70DC007F48EE /* Sign in */,
 			);
@@ -884,6 +895,26 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		53FC31D026DEEBD4007F48EE /* Pokemon details */ = {
+			isa = PBXGroup;
+			children = (
+				53FC31DB26DEEBF6007F48EE /* Views */,
+				53FC31D226DEEBEE007F48EE /* PokemonDetailsPresenter.swift */,
+				53FC31D326DEEBEE007F48EE /* PokemonDetailsRouter.swift */,
+				53FC31D426DEEBEE007F48EE /* PokemonDetailsViewController.swift */,
+				53FC31D526DEEBEE007F48EE /* PokemonDetailsInteractor.swift */,
+			);
+			path = "Pokemon details";
+			sourceTree = "<group>";
+		};
+		53FC31DB26DEEBF6007F48EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				53FC31D126DEEBEE007F48EE /* PokemonDetailsContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1143,8 +1174,10 @@
 				53FC31CB26DE91E6007F48EE /* DataSourceProtocol.swift in Sources */,
 				53FC31B126DE80FD007F48EE /* PokemonListRouter.swift in Sources */,
 				53FC314326DC49BC007F48EE /* Router.swift in Sources */,
+				53FC31DA26DEEBEE007F48EE /* PokemonDetailsInteractor.swift in Sources */,
 				53FC315026DCC012007F48EE /* UIWindow-NSoftJobAssignment.swift in Sources */,
 				53FC315826DD72D2007F48EE /* SignInPresenter.swift in Sources */,
+				53FC31D726DEEBEE007F48EE /* PokemonDetailsPresenter.swift in Sources */,
 				53FC31B026DE80FD007F48EE /* PokemonListPresenter.swift in Sources */,
 				53FC316E26DE219E007F48EE /* ActionButton-NSoftJobAssignment.swift in Sources */,
 				53FC31B326DE80FD007F48EE /* PokemonListInteractor.swift in Sources */,
@@ -1152,6 +1185,7 @@
 				53FC31C126DE8806007F48EE /* ReusableView.swift in Sources */,
 				53FC31B226DE80FD007F48EE /* PokemonListViewController.swift in Sources */,
 				53FC31A326DE6EC9007F48EE /* ImageDummy.swift in Sources */,
+				53FC31D826DEEBEE007F48EE /* PokemonDetailsRouter.swift in Sources */,
 				53FC314C26DCB94B007F48EE /* AppDataProtocol.swift in Sources */,
 				53FC31C326DE8B80007F48EE /* PokemonListDataSource.swift in Sources */,
 				53FC315A26DD72D2007F48EE /* SignInViewController.swift in Sources */,
@@ -1167,10 +1201,12 @@
 				53FC31AF26DE80FD007F48EE /* PokemonListContentView.swift in Sources */,
 				53FC316226DD7826007F48EE /* StartupProcess.swift in Sources */,
 				53FC314526DC4C7F007F48EE /* Globals.swift in Sources */,
+				53FC31D926DEEBEE007F48EE /* PokemonDetailsViewController.swift in Sources */,
 				53FC31BD26DE84A4007F48EE /* CompositionalLayoutVendor.swift in Sources */,
 				53FC31CD26DECF27007F48EE /* String-NSoftJobAssignment.swift in Sources */,
 				53FC31CF26DED2BB007F48EE /* UIBarButtonItem-NSoftJobAssignment.swift in Sources */,
 				53FC31B726DE8141007F48EE /* PokemonListCell.swift in Sources */,
+				53FC31D626DEEBEE007F48EE /* PokemonDetailsContentView.swift in Sources */,
 				53FC315726DD72D2007F48EE /* SignInContentView.swift in Sources */,
 				53FC31C926DE9156007F48EE /* Collection-NSoftJobAssignment.swift in Sources */,
 				53FC315B26DD72D2007F48EE /* SignInInteractor.swift in Sources */,

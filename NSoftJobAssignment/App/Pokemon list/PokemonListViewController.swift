@@ -26,12 +26,12 @@ class PokemonListViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
+    presenter?.onViewDidLoad()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     setupNaviagtionBar()
-    presenter?.onViewDidAppeared()
   }
 }
 
@@ -55,7 +55,7 @@ extension PokemonListViewController: PokemonListDisplayLogic {
 extension PokemonListViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return dataSource?.numberOfItems(in: section) ?? 0
- //dataSource?.pokemonList.count ?? 0
+    //dataSource?.pokemonList.count ?? 0
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -76,7 +76,7 @@ extension PokemonListViewController: UICollectionViewDataSource {
 // MARK: - CollectionViewDelegate
 extension PokemonListViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    //    presenter?.onItemSelected(at: indexPath)
+    presenter?.onItemSelected(at: indexPath)
   }
 }
 

@@ -11,7 +11,7 @@ import Model
 
 protocol PokemonListRoutingLogic: AnyObject {
   func showFavouritesList()
-  func showDetails(pokemon: PokemonListResultItem)
+  func showDetails(for pokemonId: Int)
 }
 
 protocol PokemonListRouterDelegate: AnyObject { }
@@ -38,7 +38,10 @@ extension PokemonListRouter: PokemonListRoutingLogic {
     #warning("Implement")
   }
   
-  func showDetails(pokemon: PokemonListResultItem) {
-    #warning("Implement")
+  func showDetails(for pokemonId: Int) {
+    let pokemonDetailsScene = PokemonDetailsRouter.createModule(pokemonId: pokemonId, delegate: self)
+    viewController?.navigationController?.pushViewController(pokemonDetailsScene, animated: true)
   }
 }
+
+extension PokemonListRouter: PokemonDetailsRouterDelegate { }

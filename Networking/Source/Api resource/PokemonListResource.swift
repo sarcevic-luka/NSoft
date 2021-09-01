@@ -10,7 +10,6 @@ import Alamofire
 
 public enum PokemonListResource: Resource {
   case getPokemonsList(offset: Int, limit: Int)
-  // Acutal Appointmen details controller
   case getPokemonDetails(pokemonId: Int)
   
   var endpoint: String {
