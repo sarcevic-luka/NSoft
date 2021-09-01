@@ -18,7 +18,7 @@ protocol FavoritesListBusinessLogic: AnyObject {
 
 class FavoritesListInteractor {
   private let favoritesPokemonPersistanceService: FavoritesPokemonPersistanceServiceProtocol
-
+  
   init(favoritesPokemonPersistanceService: FavoritesPokemonPersistanceServiceProtocol = FavoritesPokemonPersistanceService()
   ) {
     self.favoritesPokemonPersistanceService = favoritesPokemonPersistanceService

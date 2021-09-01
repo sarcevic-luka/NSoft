@@ -36,11 +36,11 @@ extension PokemonDetailsPresenter: PokemonDetailsViewPresentingLogic {
     getPokemonFavoriteStatus()
     getAndSetPokemonDetails()
   }
-
+  
   func onBackBarButtonItemTapped() {
     router.dismiss()
   }
-
+  
   func onFavoritesButtonTapped() {
     guard let details = pokemonDetails else {
       return
@@ -72,4 +72,3 @@ private extension PokemonDetailsPresenter {
       }
   }
 }
-

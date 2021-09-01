@@ -46,7 +46,7 @@ extension FavoritesListPresenter: FavoritesListViewPresentingLogic {
         self?.loadFavoritesList()
       }
   }
-
+  
   func onViewWillAppear() {
     loadFavoritesList()
   }

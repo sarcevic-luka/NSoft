@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Networking
 
 protocol PokemonListViewPresentingLogic: AnyObject {
   func onFavouritesSelected()
@@ -68,6 +69,10 @@ private extension PokemonListPresenter {
         dataSource.setPokemons(pokemonList)
         strongSelf.view?.displayPokemonList(using: pokemonList)
       }
+      .catch { [weak self] error in
+        self?.view?.displayMessagePopup(with: .customError(error.localizedDescription))
+      }
+
       .always { [weak self] in
         self?.isFetchInProgress = false
       }

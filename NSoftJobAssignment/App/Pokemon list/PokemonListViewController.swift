@@ -12,9 +12,11 @@ import Networking
 
 protocol PokemonListDisplayLogic: AnyObject {
   func displayPokemonList(using pokemonList: PokemonList)
+  func displayMessagePopup(with context: MessagePopupView.State)
 }
 
-class PokemonListViewController: UIViewController {
+class PokemonListViewController: UIViewController, MessagePopupViewPresentable {
+  var messagePopup: MessagePopupView?
   var presenter: PokemonListViewPresentingLogic?
   private var dataSource: PokemonListDataSource?
   private lazy var contentView = PokemonListContentView()
@@ -37,6 +39,10 @@ class PokemonListViewController: UIViewController {
 
 // MARK: - PokemonListDisplayLogic
 extension PokemonListViewController: PokemonListDisplayLogic {
+  func displayMessagePopup(with context: MessagePopupView.State) {
+    presentMessagePopup(MessagePopupView(context: context), completion: nil)
+  }
+  
   func displayPokemonList(using pokemonList: PokemonList) {
     guard let _ = self.dataSource else {
       self.dataSource = PokemonListDataSource(pokemonList: pokemonList)

@@ -44,7 +44,7 @@ extension FavoritesListRouter: FavoritesListRoutingLogic {
     delegate?.favoritesListRouterRequestedDismissal()
   }
 }
- 
+
 extension FavoritesListRouter: PokemonDetailsRouterDelegate {
   func pokemonDetailsRouterRequestedDismissal() {
     viewController?.navigationController?.popViewController(animated: true)

@@ -18,11 +18,10 @@ extension AppDelegate: UIApplicationDelegate {
     
     StartupProcessService()
       .execute(process: AppearanceCustomisationStartupProcess())
-
+    
     window?.rootViewController = appRouter.initialViewController()
     window?.makeKeyAndVisible()
-
+    
     return true
   }
 }
-

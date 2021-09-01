@@ -13,7 +13,7 @@ protocol AppRoutingLogic { }
 // MARK: AppRouter
 final class AppRouter {
   private let appData: AppDataProtocol
-
+  
   init(appData: AppDataProtocol = AppData()) {
     self.appData = appData
   }

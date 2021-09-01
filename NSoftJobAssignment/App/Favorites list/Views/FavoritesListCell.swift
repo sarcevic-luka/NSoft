@@ -14,13 +14,13 @@ class FavoritesListCell: UITableViewCell {
     let imageId: Int
     let types: String
   }
-
+  
   private lazy var containerView = UIView()
   private lazy var pokemonImageView = UIImageView()
   private lazy var nameLabel = UILabel()
   private lazy var typesLabel = UILabel()
   private var defaultWidthMultiplier: CGFloat { 335.0 / 375.0 }
-
+  
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     setupViews()
@@ -57,11 +57,11 @@ private extension FavoritesListCell {
     setupNameLabel()
     setupTypesLabel()
   }
-
+  
   func setupView() {
     selectionStyle = .none
   }
-
+  
   func setupContainerView() {
     addSubview(containerView)
     containerView.snp.makeConstraints {

@@ -10,7 +10,6 @@ import UIKit
 
 class FavoritesListContentView: UIView {
   private(set) lazy var tableView = UITableView(frame: .zero, style: .plain)
-
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -22,7 +21,7 @@ class FavoritesListContentView: UIView {
   }
 }
 
- // MARK: - Private Methods
+// MARK: - Private Methods
 private extension FavoritesListContentView {
   func setupViews() {
     setupView()
@@ -32,7 +31,7 @@ private extension FavoritesListContentView {
   func setupView() {
     backgroundColor = .white
   }
-
+  
   func setupTableView() {
     addSubview(tableView)
     tableView.snp.makeConstraints {
