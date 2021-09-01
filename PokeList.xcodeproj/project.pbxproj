@@ -245,7 +245,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		53FC308526D98D18007F48EE /* NSoftJobAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSoftJobAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FC308526D98D18007F48EE /* PokeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FC308826D98D18007F48EE /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
 		53FC309126D98D19007F48EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53FC309426D98D19007F48EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -432,7 +432,7 @@
 		53FC308626D98D18007F48EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				53FC308526D98D18007F48EE /* NSoftJobAssignment.app */,
+				53FC308526D98D18007F48EE /* PokeList.app */,
 				53FC30BA26DAD4F3007F48EE /* Model.framework */,
 				53FC30D526DB8832007F48EE /* Networking.framework */,
 				53FC311426DC07F2007F48EE /* SPMLibaries.framework */,
@@ -1157,9 +1157,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		53FC308426D98D18007F48EE /* NSoftJobAssignment */ = {
+		53FC308426D98D18007F48EE /* PokeList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53FC309926D98D19007F48EE /* Build configuration list for PBXNativeTarget "NSoftJobAssignment" */;
+			buildConfigurationList = 53FC309926D98D19007F48EE /* Build configuration list for PBXNativeTarget "PokeList" */;
 			buildPhases = (
 				53FC308126D98D18007F48EE /* Sources */,
 				53FC308226D98D18007F48EE /* Frameworks */,
@@ -1175,11 +1175,11 @@
 				53FC317A26DE690A007F48EE /* PBXTargetDependency */,
 				53FC31E726DF5240007F48EE /* PBXTargetDependency */,
 			);
-			name = NSoftJobAssignment;
+			name = PokeList;
 			packageProductDependencies = (
 			);
 			productName = NSoftJobAssignment;
-			productReference = 53FC308526D98D18007F48EE /* NSoftJobAssignment.app */;
+			productReference = 53FC308526D98D18007F48EE /* PokeList.app */;
 			productType = "com.apple.product-type.application";
 		};
 		53FC30B926DAD4F3007F48EE /* Model */ = {
@@ -1320,7 +1320,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 53FC308026D98D18007F48EE /* Build configuration list for PBXProject "NSoftJobAssignment" */;
+			buildConfigurationList = 53FC308026D98D18007F48EE /* Build configuration list for PBXProject "PokeList" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1341,7 +1341,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53FC308426D98D18007F48EE /* NSoftJobAssignment */,
+				53FC308426D98D18007F48EE /* PokeList */,
 				53FC30B926DAD4F3007F48EE /* Model */,
 				53FC30D426DB8832007F48EE /* Networking */,
 				53FC311326DC07F2007F48EE /* SPMLibaries */,
@@ -2045,7 +2045,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		53FC308026D98D18007F48EE /* Build configuration list for PBXProject "NSoftJobAssignment" */ = {
+		53FC308026D98D18007F48EE /* Build configuration list for PBXProject "PokeList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53FC309726D98D19007F48EE /* Debug */,
@@ -2054,7 +2054,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53FC309926D98D19007F48EE /* Build configuration list for PBXNativeTarget "NSoftJobAssignment" */ = {
+		53FC309926D98D19007F48EE /* Build configuration list for PBXNativeTarget "PokeList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53FC309A26D98D19007F48EE /* Debug */,

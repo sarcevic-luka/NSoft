@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "53FC308426D98D18007F48EE"
-               BuildableName = "NSoftJobAssignment.app"
-               BlueprintName = "NSoftJobAssignment"
-               ReferencedContainer = "container:NSoftJobAssignment.xcodeproj">
+               BuildableName = "PokeList.app"
+               BlueprintName = "PokeList"
+               ReferencedContainer = "container:PokeList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "53FC308426D98D18007F48EE"
-            BuildableName = "NSoftJobAssignment.app"
-            BlueprintName = "NSoftJobAssignment"
-            ReferencedContainer = "container:NSoftJobAssignment.xcodeproj">
+            BuildableName = "PokeList.app"
+            BlueprintName = "PokeList"
+            ReferencedContainer = "container:PokeList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "53FC308426D98D18007F48EE"
-            BuildableName = "NSoftJobAssignment.app"
-            BlueprintName = "NSoftJobAssignment"
-            ReferencedContainer = "container:NSoftJobAssignment.xcodeproj">
+            BuildableName = "PokeList.app"
+            BlueprintName = "PokeList"
+            ReferencedContainer = "container:PokeList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
