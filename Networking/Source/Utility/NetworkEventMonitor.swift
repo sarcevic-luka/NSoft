@@ -27,7 +27,7 @@ extension NetworkEventMonitor: EventMonitor {
     if [HTTPMethod.post, HTTPMethod.put, HTTPMethod.patch].contains(method), let body = urlRequest.httpBody, let json = String(data: body, encoding: .utf8) {
       log += "\nBody: \(json)"
     }
-    print("🌐 | \(#function) | \(log)")
+    debugPrint("🌐 | \(#function) | \(log)")
   }
   
   internal func request<Value>(_ request: DataRequest, didParseResponse response: DataResponse<Value, AFError>) {
@@ -39,7 +39,7 @@ extension NetworkEventMonitor: EventMonitor {
       let jsonString = String(data: prettyPrintedData, encoding: .utf8) else {
       return
     }
-    print("🌐 | \(#function)\nResponse: \(jsonString)")
+    debugPrint("🌐 | \(#function)\nResponse: \(jsonString)")
   }
   
   internal func requestDidFinish(_ request: Alamofire.Request) {
@@ -49,6 +49,6 @@ extension NetworkEventMonitor: EventMonitor {
       let response = request.response,
       let url = request.response?.url else { return }
     let log = [response.statusCode.description, method.rawValue, url.absoluteString].joined(separator: " ")
-    print("🌐 | \(#function) | \(log)")
+    debugPrint("🌐 | \(#function) | \(log)")
   }
 }

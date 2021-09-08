@@ -32,7 +32,7 @@ extension PersistenceStartupProcess: PersistenceStartupProcessProtocol {
               t.column("types", .text).notNull()
             }
           } catch {
-            print(error)
+            debugPrint(error)
           }
         }
       fullfill(())

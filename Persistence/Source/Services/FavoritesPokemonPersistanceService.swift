@@ -66,7 +66,7 @@ private extension FavoritesPokemonPersistanceService {
           try PokemonDetailsDBO(pokemonDetails: pokemonDetails).save(db)
         }
     } catch {
-      print(error)
+      debugPrint(error)
     }
   }
   
@@ -77,7 +77,7 @@ private extension FavoritesPokemonPersistanceService {
           try PokemonDetailsDBO.deleteOne(db, key: pokemonId)
         }
     } catch {
-      print(error)
+      debugPrint(error)
     }
   }
 }

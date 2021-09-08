@@ -27,7 +27,7 @@ class SignInPresenter {
 // MARK: - SignInViewPresentingLogic
 extension SignInPresenter: SignInViewPresentingLogic {
   func onContinueButtonTapped(with username: String) {
-    if username.count == 0 {
+    if username.isEmpty {
       view?.displayUsernameMissing()
     } else {
       interactor?.login(username: username)

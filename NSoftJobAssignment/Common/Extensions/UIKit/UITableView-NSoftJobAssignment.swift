@@ -22,7 +22,7 @@ public extension UITableView {
   
   func dequeueReusableCell<T: UITableViewCell>(_ cell: T.Type, at indexPath: IndexPath) -> T {
     guard let cell = dequeueReusableCell(withIdentifier: T.identifier, for: indexPath) as? T else {
-      print("Could not dequeue cell with identifier: \(T.identifier). Creating new instance.")
+      debugPrint("Could not dequeue cell with identifier: \(T.identifier). Creating new instance.")
       return T()
     }
     return cell

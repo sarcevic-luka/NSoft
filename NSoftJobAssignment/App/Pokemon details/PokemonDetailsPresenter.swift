@@ -60,8 +60,8 @@ private extension PokemonDetailsPresenter {
         self?.pokemonDetails = pokemonDetails
         self?.view?.display(pokemonDetails: pokemonDetails)
       }
-      .catch { errpr in
-        print(errpr)
+      .catch { error in
+        debugPrint(error)
       }
   }
   

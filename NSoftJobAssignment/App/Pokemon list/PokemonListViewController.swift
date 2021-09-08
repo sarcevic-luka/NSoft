@@ -60,7 +60,7 @@ extension PokemonListViewController: PokemonListDisplayLogic {
 // MARK: - CollectionViewDataSource
 extension PokemonListViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return dataSource?.pokemonList.count ?? 0 //dataSource?.numberOfItems(in: section) ?? 0
+    return dataSource?.pokemonList.count ?? 0 
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
